@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
 <board schema_version="2.1" vendor="em.avnet.com" name="ultrazed_eg_pciecc" display_name="Avnet UltraZed-3EG PCIe Carrier Card (ES1 Silicon)" url="http://www.ultrazed.org" preset_file="preset.xml">
 <images>
-    <image name="ultrazed_eg_pcie_carrier_card.jpeg" display_name="UltraZed-3EG PCIe Carrier Card" sub_type="board">
+    <image name="ultrazed_eg_pcie_carrier_card.jpg" display_name="UltraZed-3EG PCIe Carrier Card" sub_type="board">
       <description>UltraZed-3EG PCIe Carrier Card File Image</description>
     </image>
   </images>
