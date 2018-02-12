@@ -13,7 +13,7 @@ Avnet, Inc. makes no warranty for the use of these design files.  The files are 
 Current Tools Version:
 ----------------------
 
-* **Xilinx Vivado Design Suite**: [Vivado 2017.2]
+* **Xilinx Vivado Design Suite**: [Vivado 2017.4]
 
 
 Installing the UltraZed-EG Board Definition Files 
@@ -21,11 +21,11 @@ Installing the UltraZed-EG Board Definition Files
 
 This repository is intended to provide publicly accessible, revision control for all current Avnet Board Definition Files.
 
-Please copy the desired Board Definition Files from this repository to the following folder of the Vivado 2017.2 install directory:
+Please copy the desired Board Definition Files from this repository to the following folder of the Vivado 2017.4 install directory:
 
-<install_location>\Vivado\2017.2\data\boards\board_files
+<install_location>\Vivado\2017.4\data\boards\board_files
 
-Once the files are copied to the appropriate Vivado install sub-folder, launch Vivado Design Suite 2017.2 to be able to access the Avnet boards through the new project creation wizard or use one of the scripted project builds from the Avnet [hdl] repository.
+Once the files are copied to the appropriate Vivado install sub-folder, launch Vivado Design Suite 2017.4 to be able to access the Avnet boards through the new project creation wizard or use one of the scripted project builds from the Avnet [hdl] repository.
 
 
 Where can I get support?
@@ -51,7 +51,7 @@ I am an engineer at Avnet, how can I submit code changes?
 
 * Please contact the Avnet Design Group for further details.
 
-[Vivado 2017.2]:http://www.xilinx.com/content/xilinx/en/downloadNav/vivado-design-tools/2017-2.html
+[Vivado 2017.4]:http://www.xilinx.com/content/xilinx/en/downloadNav/vivado-design-tools/2017-4.html
 [Avnet Technical Community]:http://community.em.avnet.com/
 [Zed Community Support Forums]:http://www.minized.org/forum
 [hdl]:https://github.com/Avnet/hdl
