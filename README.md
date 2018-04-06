@@ -16,8 +16,8 @@ Current Tools Version:
 * **Xilinx Vivado Design Suite**: [Vivado 2017.4]
 
 
-Installing the UltraZed-EG Board Definition Files 
--------------------------------------------------
+Installing the Avnet Board Definition Files 
+-------------------------------------------
 
 This repository is intended to provide publicly accessible, revision control for all current Avnet Board Definition Files.
 
@@ -33,7 +33,7 @@ Where can I get support?
 
 For design support please contact your local Avnet FAE or visit one of our support forums:
 
-* For design-in product support for MicroZed, PicoZed, UltraZed, Zynq Mini Module Plus, and Zynq Mini-ITX please access the community support forums at [Zed Community Support Forums].
+* For design-in product support for MicroZed, PicoZed, and UltraZed modules please access the community support forums at [Zed Community Support Forums].
 
 * Please access the [Avnet Technical Community] forums for all other board support inquiries.
 
@@ -52,7 +52,7 @@ I am an engineer at Avnet, how can I submit code changes?
 * Please contact the Avnet Design Group for further details.
 
 [Vivado 2017.4]:http://www.xilinx.com/content/xilinx/en/downloadNav/vivado-design-tools/2017-4.html
-[Avnet Technical Community]:http://community.em.avnet.com/
-[Zed Community Support Forums]:http://www.minized.org/forum
+[Avnet Technical Community]:http://community.avnet.com/
+[Zed Community Support Forums]:http://www.ultrazed.org/forum
 [hdl]:https://github.com/Avnet/hdl
 [logo]:https://github.com/Avnet/legal/blob/master/avnet_logo.png "Avnet"
