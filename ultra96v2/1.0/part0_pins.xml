@@ -131,7 +131,7 @@
   <pin index="120" name ="c0_ddr4_reset_n" iostandard="LVCMOS18" loc="A17" drive="8"/>
   <pin index="121" name ="c0_ddr4_parity"     iostandard="SSTL12_DCI"     loc="D19"  output_impedance="RDRV_40_40" slew="FAST"/>
   
-  <pin index="122" name ="RADIO_LED0" iostandard="LVCMOS18" loc="AR9"/>
+  <pin index="122" name ="RADIO_LED0" iostandard="LVCMOS18" loc="A9"/>
   <pin index="123" name ="RADIO_LED1" iostandard="LVCMOS18" loc="B9"/>
     
   <pin index="124" name ="PL_RADIO_RESET" iostandard="LVCMOS18" loc="A3"/>	
