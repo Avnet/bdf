@@ -8,7 +8,7 @@
   <compatible_board_revisions>
     <revision id="0">1.0</revision>
   </compatible_board_revisions>
-  <file_version>1.1</file_version>
+  <file_version>1.2</file_version>
   <description>Avnet UltraZed-3EG PCIe Carrier Card</description>
 
   <components>
