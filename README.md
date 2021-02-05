@@ -15,7 +15,7 @@ Avnet, Inc. makes no warranty for the use of these design files.  The files are 
 Current Tools Version:
 ----------------------
 
-* **Xilinx Vivado HLx**: [Vivado 2018.3]
+* **Version Agnosti**c [Vivado 2018.3+]
 
 
 Installing the Avnet Board Definition Files Under Windows
@@ -49,7 +49,7 @@ Detailed Instructions for Installing Files Under Ubuntu without using Git
 
 3. Under Ubuntu, we need to make sure that read and write permissions for Vivado tools folder are set as expected to allow you to install the Board Definition Files in the correct location.  Open a terminal and run the following commands (Note: This is assuming you followed the latest Avnet [VM Installation Guide] or have installed Vivado on your native Ubuntu development PC using the default install location):
 
-`$ cd /tools/Xilinx/Vivado/2018.3/data/boards/`
+`$ cd /tools/Xilinx/Vivado/[version]/data/boards/`
 
 `$ sudo chown training -R board_files`
 
@@ -65,7 +65,7 @@ Detailed Instructions for Installing Files Under Ubuntu without using Git
 
 `$ unzip bdf-master.zip`
 
-`$ cp -a ./bdf-master/. /tools/Xilinx/Vivado/2018.3/data/boards/board_files`
+`$ cp -a ./bdf-master/. /tools/Xilinx/Vivado/[version]/data/boards/board_files`
 
 6. Feel free to delete any BDF files located in your home directory or temporary download locations for the *__bdf-master.zip__* archive.  Now that all board definition files are copied to the correct vivado *__board_files__* directory you are ready to start development work using built-in tools support for Avnet boards.  If you are unsure of where to start, please check out the latest Avnet [Technical Training Courses] for these boards which will provide you a great deal of information on how to best utilize the Xilinx tools and maximize the utility of your Avnet board as a development platform for your next system design.
 
@@ -93,10 +93,10 @@ I am an engineer at Avnet, how can I submit code changes?
 
 * Please contact the Avnet Products Group for further details.
 
-[Vivado 2018.3]:https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2018-3.html
+[Vivado]:https://www.xilinx.com/products/design-tools/vivado.html
 [Element14 Zed Community]:http://avnet.me/zed-community
 [Element14 Zed Community Support Forums]:http://avnet.me/zed-forums
-[VM Installation Guide]:http://avnet.me/vm_install_guide_2018_3
+[VM Installation Guide]:http://avnet.me/vm_install
 [Technical Training Courses]:http://avnet.me/TTC
 [BDF]:https://github.com/Avnet/bdf
 [hdl]:https://github.com/Avnet/hdl

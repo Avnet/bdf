@@ -2,18 +2,6 @@
 <ip_presets schema="1.0">
 
 
-  <ip_preset preset_proc_name="ddr4_sdram_preset">
-    <ip vendor="xilinx.com" library="ip" name="ddr4">
-      <user_parameters>
-        <user_parameter name="CONFIG.C0.DDR4_MemoryPart" value="MT40A512M16HA-083E" />
-        <user_parameter name="CONFIG.C0.DDR4_DataWidth" value="16" />
-        <user_parameter name="CONFIG.C0.DDR4_TimePeriod" value="833" />
-        <user_parameter name="CONFIG.C0.DDR4_InputClockPeriod" value="3332" />
-        <user_parameter name="CONFIG.ADDN_UI_CLKOUT1_FREQ_HZ" value="100" />
-      </user_parameters>
-    </ip>
-  </ip_preset>
-
 
   <ip_preset preset_proc_name="zynq_ultra_ps_e_preset"> 
     <ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" version="*"> 
@@ -21,7 +9,6 @@
 <user_parameter name="CONFIG.PSU_BANK_0_IO_STANDARD" value="LVCMOS18"/>
 <user_parameter name="CONFIG.PSU_BANK_1_IO_STANDARD" value="LVCMOS33"/>
 <user_parameter name="CONFIG.PSU_BANK_2_IO_STANDARD" value="LVCMOS18"/>
-<user_parameter name="CONFIG.PSU_BANK_3_IO_STANDARD" value="LVCMOS18"/>
 
 <user_parameter name="CONFIG.PSU__CAN1__PERIPHERAL__ENABLE" value="0"/>
 
@@ -67,20 +54,17 @@
 <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__ENABLE" value="1"/>
 <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__IO" value="MIO 52 .. 63"/>
 
-<user_parameter name="CONFIG.PSU__USE__M_AXI_GP0" value="1"/>
-<user_parameter name="CONFIG.PSU__USE__M_AXI_GP1" value="1"/>
-<user_parameter name="CONFIG.PSU__USE__M_AXI_GP2" value="0"/>
+<user_parameter name="CONFIG.PSU__USE__M_AXI_GP2" value="1"/>
 <user_parameter name="CONFIG.PSU__MAXIGP2__DATA_WIDTH" value="64"/>
 
+<user_parameter name="CONFIG.PSU__PCIE__PERIPHERAL__ENDPOINT_ENABLE" value="1"/>
 <user_parameter name="CONFIG.PSU__PCIE__PERIPHERAL__ENABLE" value="1"/>
-<user_parameter name="CONFIG.PSU__PCIE__PERIPHERAL__ROOTPORT_IO" value="MIO 31"/>
-<user_parameter name="CONFIG.PSU__PCIE__DEVICE_PORT_TYPE" value="Root Port"/>
+<user_parameter name="CONFIG.PSU__PCIE__PERIPHERAL__ENDPOINT_IO" value="MIO 31"/>
+<user_parameter name="CONFIG.PSU__PCIE__DEVICE_PORT_TYPE" value="Endpoint Device"/>
 <user_parameter name="CONFIG.PSU__PCIE__BAR0_ENABLE" value="0"/>
 <user_parameter name="CONFIG.PSU__PCIE__DEVICE_ID" value="0xD021"/>
 <user_parameter name="CONFIG.PSU__PCIE__CLASS_CODE_BASE" value="0x06"/>
 <user_parameter name="CONFIG.PSU__PCIE__CLASS_CODE_SUB" value="0x4"/>
-<user_parameter name="CONFIG.PSU__PCIE__CRS_SW_VISIBILITY" value="1"/>
-<user_parameter name="CONFIG.PSU__PCIE__LANE1__ENABLE" value="0"/>
 <user_parameter name="CONFIG.PSU__PCIE__MAXIMUM_LINK_WIDTH" value="x1"/>
 <user_parameter name="CONFIG.PSU__PCIE__LINK_SPEED" value="5.0 Gb/s"/>
 
@@ -99,23 +83,23 @@
 <user_parameter name="CONFIG.PSU__DDRC__ENABLE" value="1"/>
 <user_parameter name="CONFIG.PSU__DDRC__VREF" value="1"/>
 <user_parameter name="CONFIG.PSU__DDRC__ECC" value="Disabled"/>
-<user_parameter name="CONFIG.PSU__DDRC__BUS_WIDTH" value="64 Bit"/>
+<user_parameter name="CONFIG.PSU__DDRC__BUS_WIDTH" value="32 Bit"/>
 <user_parameter name="CONFIG.PSU__DDRC__DRAM_WIDTH" value="16 Bits"/>
 <user_parameter name="CONFIG.PSU__DDRC__MEMORY_TYPE" value="DDR 4"/>
-<user_parameter name="CONFIG.PSU__DDRC__SPEED_BIN" value="DDR4_2400R"/>
-<user_parameter name="CONFIG.PSU__CRF_APB__DDR_CTRL__FREQMHZ" value="1200"/>
+<user_parameter name="CONFIG.PSU__DDRC__SPEED_BIN" value="DDR4_2133P"/>
+<user_parameter name="CONFIG.PSU__CRF_APB__DDR_CTRL__FREQMHZ" value="1067"/>
 <user_parameter name="CONFIG.PSU__DDRC__DEVICE_CAPACITY" value="8192 MBits"/>
 <user_parameter name="CONFIG.PSU__DDRC__RANK_ADDR_COUNT" value="0"/>
 <user_parameter name="CONFIG.PSU__DDRC__BG_ADDR_COUNT" value="1"/>
 <user_parameter name="CONFIG.PSU__DDRC__BANK_ADDR_COUNT" value="2"/>
 <user_parameter name="CONFIG.PSU__DDRC__ROW_ADDR_COUNT" value="16"/>
 <user_parameter name="CONFIG.PSU__DDRC__COL_ADDR_COUNT" value="10"/>
-<user_parameter name="CONFIG.PSU__DDRC__CL" value="16"/>
-<user_parameter name="CONFIG.PSU__DDRC__CWL" value="16"/>
-<user_parameter name="CONFIG.PSU__DDRC__T_RCD" value="16"/>
-<user_parameter name="CONFIG.PSU__DDRC__T_RP" value="16"/>
-<user_parameter name="CONFIG.PSU__DDRC__T_RC" value="45.32"/>
-<user_parameter name="CONFIG.PSU__DDRC__T_RAS_MIN" value="32"/>
+<user_parameter name="CONFIG.PSU__DDRC__CL" value="15"/>
+<user_parameter name="CONFIG.PSU__DDRC__CWL" value="14"/>
+<user_parameter name="CONFIG.PSU__DDRC__T_RCD" value="15"/>
+<user_parameter name="CONFIG.PSU__DDRC__T_RP" value="15"/>
+<user_parameter name="CONFIG.PSU__DDRC__T_RC" value="47.06"/>
+<user_parameter name="CONFIG.PSU__DDRC__T_RAS_MIN" value="33"/>
 <user_parameter name="CONFIG.PSU__DDRC__T_FAW" value="30.0"/>
 <user_parameter name="CONFIG.PSU__DDRC__DDR4_T_REF_MODE" value="0"/>
 <user_parameter name="CONFIG.PSU__DDRC__DDR4_T_REF_RANGE" value="Normal (0-85)"/>
