@@ -11,7 +11,7 @@
 <file_version>1.3</file_version>
 <description>PicoZed 7030 SOM + FMC Carrier V2</description>
 <components>
-  <component name="part0" display_name="PicoZed 7030 SOM + FMC Carrier V2" type="fpga" part_name="xc7z030sbg485-1" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://avnet.me/picozed">
+  <component name="part0" display_name="PicoZed 7030 SOM + FMC Carrier V2" type="fpga" part_name="xc7z030sbg485-1-i" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://avnet.me/picozed">
     <interfaces>
         <interface mode="master" name="pl_pbs_5bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="pl_pbs_5bits" preset_proc="pl_pbs_5bits_preset">
         	<description>5 push buttons</description>
