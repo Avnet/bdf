@@ -1,0 +1,33 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "picozed_7030_fmc2", 
+          "display": "PicoZed 7030 SOM + FMC Carrier V2", 
+          "revision": "1.3", 
+          "description": "PicoZed 7030 SOM + FMC Carrier V2", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/picozed", 
+          "search-keywords": [
+            "picozed_7030_fmc2", 
+            "avnet.com", 
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

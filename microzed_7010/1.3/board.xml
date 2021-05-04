@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<board schema_version="2.0" vendor="avnet.com" name="microzed_7010" display_name="MicroZed 7010 Board" url="http://avnet.me/microzed" preset_file="preset.xml" >
+<!--   ** **        **          **  ****      **  **********  ********** ®   
+      **   **        **        **   ** **     **  **              **
+     **     **        **      **    **  **    **  **              **
+    **       **        **    **     **   **   **  *********       **
+   **         **        **  **      **    **  **  **              **
+  **           **        ****       **     ** **  **              **
+ **  .........  **        **        **      ****  **********      **
+    ...........
+                                    Reach Further™
+ Copyright (C) 2021, Avnet Inc - All rights reserved
+ Licensed under the Apache License, Version 2.0 (the "License"). You may
+ not use this file except in compliance with the License. A copy of the
+ License is located at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ License for the specific language governing permissions and limitations
+ under the License. -->
+<board schema_version="2.2" vendor="avnet.com" name="microzed_7010" display_name="MicroZed 7010 Board" url="http://avnet.me/microzed" preset_file="preset.xml" >
   <images>
     <image name="microzed_7010.jpg" display_name="MicroZed" sub_type="board">
       <description>MicroZed 7010 Image File</description>
@@ -24,6 +43,4 @@
     <position name="0" component="part0"/>
   </jtag_chain>
 </jtag_chains>
-<connections>
-</connections>
 </board>
