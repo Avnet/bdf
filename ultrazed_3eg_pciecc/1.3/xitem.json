@@ -1,0 +1,34 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "ultrazed_3eg_pciecc", 
+          "display": "UltraZed-EG SOM + PCIe Carrier", 
+          "revision": "1.3", 
+          "description": "UltraZed-EG SOM + PCIe Carrier", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/ultrazed-eg", 
+          "search-keywords": [
+            "ultrazed_3eg_pciecc", 
+            "ultrazed", 
+            "avnet.com", 
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

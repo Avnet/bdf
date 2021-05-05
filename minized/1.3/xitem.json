@@ -1,0 +1,33 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "minized", 
+          "display": "MiniZed", 
+          "revision": "1.3", 
+          "description": "MiniZed", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "zedhed", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/minized", 
+          "search-keywords": [
+            "minized", 
+            "avnet.com", 
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

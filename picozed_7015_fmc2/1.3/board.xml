@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<board schema_version="2.0" vendor="avnet.com" name="picozed_7015_fmc2" display_name="PicoZed 7015 SOM + FMC Carrier V2" url="http://avnet.me/picozed" preset_file="preset.xml" >
+<!--   ** **        **          **  ****      **  **********  ********** ®   
+      **   **        **        **   ** **     **  **              **
+     **     **        **      **    **  **    **  **              **
+    **       **        **    **     **   **   **  *********       **
+   **         **        **  **      **    **  **  **              **
+  **           **        ****       **     ** **  **              **
+ **  .........  **        **        **      ****  **********      **
+    ...........
+                                    Reach Further™
+ Copyright (C) 2021, Avnet Inc - All rights reserved
+ Licensed under the Apache License, Version 2.0 (the "License"). You may
+ not use this file except in compliance with the License. A copy of the
+ License is located at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ License for the specific language governing permissions and limitations
+ under the License. -->
+<board schema_version="2.2" vendor="avnet.com" name="picozed_7015_fmc2" display_name="PicoZed 7015 SOM + FMC Carrier V2" url="http://avnet.me/picozed" preset_file="preset.xml" >
   <images>
     <image name="picozed_fmc2_carrier_card.jpg" display_name="PicoZed FMC2 Carrier Card" sub_type="board">
       <description>PicoZed FMC Carrier Card V2 File Image</description>
@@ -48,7 +67,7 @@
         </interface>
       <interface mode="master" name="ps7_fixedio" type="xilinx.com:display_processing_system7:fixedio_rtl:1.0" of_component="ps7_fixedio" preset_proc="ps7_preset"> 
       </interface>
-      <interface mode="slave" name="sys_clock" type="xilinx.com:interface:clock_rtl:1.0" of_component="sys_clock">
+      <interface mode="slave" name="sys_clock" type="xilinx.com:signal:clock_rtl:1.0" of_component="sys_clock">
         <port_maps>
           <port_map logical_port="CLK" physical_port="sys_clk" dir="in">
             <pin_maps>
