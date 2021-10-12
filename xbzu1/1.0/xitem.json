@@ -1,0 +1,35 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "XBoard-ZU1", 
+          "display": "XBoard-ZU1 Single Board Computer", 
+          "revision": "1.0", 
+          "description": "XBoard-ZU1 Single Board Computer", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "http://avnet.me/XBoard-ZU1"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/XBoard-ZU1", 
+          "search-keywords": [
+            "xboard", 
+            "zu1", 
+            "sbc", 
+            "avnet.com", 
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}
