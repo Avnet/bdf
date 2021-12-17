@@ -20,26 +20,213 @@
  under the License. -->
 
 <part_info part_name="xczu1cg-sbva484-1-e">
-<pins>
-  
-  <pin index="0" name ="uart2_PL_TX"   iostandard="LVCMOS18" loc="AU15"/>
-  <pin index="1" name ="uart2_PL_RX"   iostandard="LVCMOS18" loc="AT15"/>
+   <pins>
+      <!-- PS I/O (MIO)) -->
+      <pin index="0" name ="PS_GPIO_LED1"   iostandard="LVCMOS18" loc="V4"/>
+      <pin index="0" name ="PS_GPIO_LED2"   iostandard="LVCMOS18" loc="AB6"/>
+      <pin index="0" name ="PS_GPIO_LED3"   iostandard="LVCMOS18" loc="Y6"/>
+      <pin index="0" name ="PS_GPIO_LED4"   iostandard="LVCMOS18" loc="E9"/>
 
-  <pin index="2" name ="IIC0_SCL_MAIN" iostandard="LVCMOS18" loc="AT16"/>
-  <pin index="3" name ="IIC0_SDA_MAIN" iostandard="LVCMOS18" loc="AW16"/>
-  
-  <pin index="4" name ="IIC1_SCL_MAIN" iostandard="LVCMOS12" loc="AV16"/>
-  <pin index="5" name ="IIC1_SDA_MAIN" iostandard="LVCMOS12" loc="AV13"/>
+      <pin index="0" name ="PS_IIC1_SCL"   iostandard="LVCMOS18" loc="V3"/>
+      <pin index="0" name ="PS_IIC1_SDA"   iostandard="LVCMOS18" loc="V5"/>
 
-  <pin index="6" name ="RADIO_LED0" iostandard="LVCMOS18" loc="A9"/>
-  <pin index="7" name ="RADIO_LED1" iostandard="LVCMOS18" loc="B9"/>
-    
-  <pin index="8" name ="PL_RADIO_RESET" iostandard="LVCMOS18" loc="A3"/>	
+      <pin index="0" name ="PS_UART0_TX"   iostandard="LVCMOS18" loc="W2"/>
+      <pin index="0" name ="PS_UART0_RX"   iostandard="LVCMOS18" loc="AA2"/>
 
-  <pin index="9" name ="HSIC_STR" iostandard="LVCMOS18" loc="A2"/>	
-  
-  <pin index="10" name ="GTR_CLK1_DP_27M_P" iostandard="DIFF_SSTL12" loc="J19"/>
-  <pin index="11" name ="GTR_CLK1_DP_27M_N" iostandard="DIFF_SSTL12" loc="J18"/>  
- 
-</pins>
+      <pin index="0" name ="PS_GPIO_MIO35"   iostandard="LVCMOS18" loc="E10"/>
+      <pin index="0" name ="PS_GPIO_MIO36"   iostandard="LVCMOS18" loc="D10"/>
+      <pin index="0" name ="PS_GPIO_MIO37"   iostandard="LVCMOS18" loc="E11"/>
+
+      <pin index="0" name ="PS_GPIO_SW1"   iostandard="LVCMOS18" loc="B11"/>
+      <pin index="0" name ="PS_GPIO_SW2"   iostandard="LVCMOS18" loc="D11"/>
+      <pin index="0" name ="PS_GPIO_SW3"   iostandard="LVCMOS18" loc="C10"/>
+      <pin index="0" name ="PS_GPIO_SW4"   iostandard="LVCMOS18" loc="F11"/>
+
+      <pin index="0" name ="PS_GPIO_PB1"   iostandard="LVCMOS18" loc="F12"/>
+
+      <pin index="0" name ="PS_SPI0_SCK"   iostandard="LVCMOS18" loc="C9"/>
+      <pin index="0" name ="PS_SPI0_SS0"   iostandard="LVCMOS18" loc="B10"/>
+      <pin index="0" name ="PS_SPI0_MISO"   iostandard="LVCMOS18" loc="D12"/>
+      <pin index="0" name ="PS_SPI0_MOSI"   iostandard="LVCMOS18" loc="E13"/>
+
+      <!-- PL I/O -->
+      <pin index="0" name ="PL_CLICK_PWM"   iostandard="LVCMOS18" loc="G6"/>
+
+      <pin index="0" name ="PL_CLICK_SPI_SS1"   iostandard="LVCMOS18" loc="G5"/>
+      <pin index="0" name ="PL_CLICK_SPI_SS0"   iostandard="LVCMOS18" loc="G7"/>
+      <pin index="0" name ="PL_CLICK_SPI_SCK"   iostandard="LVCMOS18" loc="F6"/>
+      <pin index="0" name ="PL_CLICK_SPI_MISO"   iostandard="LVCMOS18" loc="E6"/>
+      <pin index="0" name ="PL_CLICK_SPI_MOSI"   iostandard="LVCMOS18" loc="E5"/>
+
+      <pin index="0" name ="PL_CLICK_SCL"   iostandard="LVCMOS18" loc="F8"/>
+      <pin index="0" name ="PL_CLICK_SDA"   iostandard="LVCMOS18" loc="F7"/>
+
+      <pin index="0" name ="PL_CLICK_UART_RX"   iostandard="LVCMOS18" loc="D7"/>
+      <pin index="0" name ="PL_CLICK_UART_TX"   iostandard="LVCMOS18" loc="D6"/>
+
+      <pin index="0" name ="PL_CLICK_INT"   iostandard="LVCMOS18" loc="E8"/>
+      <pin index="0" name ="PL_CLICK_RST"   iostandard="LVCMOS18" loc="D8"/>
+
+      <pin index="0" name ="PL_SYZYGY_SCL"   iostandard="LVCMOS18" loc="B9"/>
+      <pin index="0" name ="PL_SYZYGY_SDA"   iostandard="LVCMOS18" loc="A9"/>
+      
+      <pin index="0" name ="PL_GPIO_PB1"   iostandard="LVCMOS18" loc="A8"/>
+
+      <pin index="0" name ="PL_GPIO_RGB1_R"   iostandard="LVCMOS18" loc="A7"/>
+      <pin index="0" name ="PL_GPIO_RGB1_G"   iostandard="LVCMOS18" loc="B6"/>
+      <pin index="0" name ="PL_GPIO_RGB1_B"   iostandard="LVCMOS18" loc="B5"/>
+
+      <pin index="0" name ="PL_SENSOR_SCL"   iostandard="LVCMOS18" loc="A6"/>
+      <pin index="0" name ="PL_SENSOR_SDA"   iostandard="LVCMOS18" loc="B7"/>
+
+      <pin index="0" name ="PL_GPIO_RGB2_R"   iostandard="LVCMOS18" loc="B4"/>
+      <pin index="0" name ="PL_GPIO_RGB2_G"   iostandard="LVCMOS18" loc="A2"/>
+      <pin index="0" name ="PL_GPIO_RGB2_B"   iostandard="LVCMOS18" loc="F4"/>
+
+      <!-- SYZYGY TRX2 MIO (J2) -->
+      <pin index="0" name ="PS_GPIO_MIO13"   iostandard="LVCMOS18" loc="W3"/>
+      <pin index="0" name ="PS_GPIO_MIO14"   iostandard="LVCMOS18" loc="W5"/>
+      <pin index="0" name ="PS_GPIO_MIO15"   iostandard="LVCMOS18" loc="Y4"/>
+      <pin index="0" name ="PS_GPIO_MIO16"   iostandard="LVCMOS18" loc="Y3"/>
+      <pin index="0" name ="PS_GPIO_MIO17"   iostandard="LVCMOS18" loc="AA3"/>
+      <pin index="0" name ="PS_GPIO_MIO18"   iostandard="LVCMOS18" loc="Y5"/>
+      <pin index="0" name ="PS_GPIO_MIO19"   iostandard="LVCMOS18" loc="AA4"/>
+      <pin index="0" name ="PS_GPIO_MIO20"   iostandard="LVCMOS18" loc="AB4"/>
+      <pin index="0" name ="PS_GPIO_MIO21"   iostandard="LVCMOS18" loc="W6"/>
+      <pin index="0" name ="PS_GPIO_MIO22"   iostandard="LVCMOS18" loc="AA6"/>
+      <pin index="0" name ="PS_GPIO_MIO23"   iostandard="LVCMOS18" loc="AB5"/>
+      <pin index="0" name ="PS_DPAUX_O"   iostandard="LVCMOS18" loc="G11"/>
+      <pin index="0" name ="PS_DPAUX_HPD"   iostandard="LVCMOS18" loc="G12"/>
+      <pin index="0" name ="PS_DPAUX_OE"   iostandard="LVCMOS18" loc="F9"/>
+      <pin index="0" name ="PS_DPAUX_I"   iostandard="LVCMOS18" loc="G10"/>
+      <pin index="0" name ="PL_HD_DP_07_GC_P"   iostandard="LVCMOS18" loc="D5"/>
+      <pin index="0" name ="PL_HD_DP_07_GC_N"   iostandard="LVCMOS18" loc="C5"/>
+      <pin index="0" name ="PL_HD_DP_08_GC_P"   iostandard="LVCMOS18" loc="C8"/>
+      <pin index="0" name ="PL_HD_DP_08_GC_N"   iostandard="LVCMOS18" loc="C7"/>
+
+      <!-- SYZYGY TRX2 PL (J1) -->
+      <pin index="0" name ="PL_HD_DP_01_DBC_P"   iostandard="LVCMOS18" loc="T3"/>
+      <pin index="0" name ="PL_HD_DP_01_DBC_N"   iostandard="LVCMOS18" loc="T2"/>
+      <pin index="0" name ="PL_HD_DP_02_P"   iostandard="LVCMOS18" loc="P3"/>
+      <pin index="0" name ="PL_HD_DP_02_N"   iostandard="LVCMOS18" loc="R3"/>
+      <pin index="0" name ="PL_HD_DP_03_P"   iostandard="LVCMOS18" loc="U2"/>
+      <pin index="0" name ="PL_HD_DP_03_N"   iostandard="LVCMOS18" loc="U1"/>
+      <pin index="0" name ="PL_HD_DP_04_P"   iostandard="LVCMOS18" loc="R4"/>
+      <pin index="0" name ="PL_HD_DP_04_N"   iostandard="LVCMOS18" loc="T4"/>
+      <pin index="0" name ="PL_HD_DP_05_P"   iostandard="LVCMOS18" loc="R1"/>
+      <pin index="0" name ="PL_HD_DP_05_N"   iostandard="LVCMOS18" loc="T1"/>
+      <pin index="0" name ="PL_HD_DP_06_P"   iostandard="LVCMOS18" loc="P5"/>
+      <pin index="0" name ="PL_HD_DP_06_N"   iostandard="LVCMOS18" loc="R5"/>
+      <pin index="0" name ="PL_HD_DP_14_GC_P"   iostandard="LVCMOS18" loc="K4"/>
+      <pin index="0" name ="PL_HD_DP_14_GC_N"   iostandard="LVCMOS18" loc="K3"/>
+      <pin index="0" name ="PL_HD_DP_15_P"   iostandard="LVCMOS18" loc="K1"/>
+      <pin index="0" name ="PL_HD_DP_15_N"   iostandard="LVCMOS18" loc="J1"/>
+      <pin index="0" name ="PL_HD_DP_24_P"   iostandard="LVCMOS18" loc="D2"/>
+      <pin index="0" name ="PL_HD_DP_24_N"   iostandard="LVCMOS18" loc="C2"/>
+      <pin index="0" name ="PL_HD_DP_11_GC_66_P"   iostandard="LVCMOS18" loc="B1"/>
+      <pin index="0" name ="PL_HD_DP_11_GC_66_N"   iostandard="LVCMOS18" loc="B1"/>
+      <pin index="0" name ="PL_HD_DP_12_GC_66_P"   iostandard="LVCMOS18" loc="A4"/>
+      <pin index="0" name ="PL_HD_DP_12_GC_66_N"   iostandard="LVCMOS18" loc="A3"/>
+
+      <!-- SYZYGY STD PL (J6) -->
+      <pin index="0" name ="PL_HD_SE_01"   iostandard="LVCMOS18" loc="N3"/>
+      <pin index="0" name ="PL_HD_SE_02"   iostandard="LVCMOS18" loc="H3"/>
+      <pin index="0" name ="PL_HD_DP_07_QBC_P"   iostandard="LVCMOS18" loc="N2"/>
+      <pin index="0" name ="PL_HD_DP_07_QBC_N"   iostandard="LVCMOS18" loc="P1"/>
+      <pin index="0" name ="PL_HD_DP_08_P"   iostandard="LVCMOS18" loc="N5"/>
+      <pin index="0" name ="PL_HD_DP_08_N"   iostandard="LVCMOS18" loc="N4"/>
+      <pin index="0" name ="PL_HD_DP_09_P"   iostandard="LVCMOS18" loc="M2"/>
+      <pin index="0" name ="PL_HD_DP_09_N"   iostandard="LVCMOS18" loc="M1"/>
+      <pin index="0" name ="PL_HD_DP_10_QBC_P"   iostandard="LVCMOS18" loc="M5"/>
+      <pin index="0" name ="PL_HD_DP_10_QBC_N"   iostandard="LVCMOS18" loc="M4"/>
+      <pin index="0" name ="PL_HD_DP_11_GC_P"   iostandard="LVCMOS18" loc="L2"/>
+      <pin index="0" name ="PL_HD_DP_11_GC_N"   iostandard="LVCMOS18" loc="L1"/>
+      <pin index="0" name ="PL_HD_DP_16_QBC_P"   iostandard="LVCMOS18" loc="J5"/>
+      <pin index="0" name ="PL_HD_DP_16_QBC_N"   iostandard="LVCMOS18" loc="H5"/>
+      <pin index="0" name ="PL_HD_DP_17_P"   iostandard="LVCMOS18" loc="H2"/>
+      <pin index="0" name ="PL_HD_DP_17_N"   iostandard="LVCMOS18" loc="G2"/>
+      <pin index="0" name ="PL_HD_DP_18_P"   iostandard="LVCMOS18" loc="H4"/>
+      <pin index="0" name ="PL_HD_DP_18_N"   iostandard="LVCMOS18" loc="G4"/>
+      <pin index="0" name ="PL_HD_DP_19_DBC_P"   iostandard="LVCMOS18" loc="G1"/>
+      <pin index="0" name ="PL_HD_DP_19_DBC_N"   iostandard="LVCMOS18" loc="F1"/>
+      <pin index="0" name ="PL_HD_DP_20_P"   iostandard="LVCMOS18" loc="E4"/>
+      <pin index="0" name ="PL_HD_DP_20_N"   iostandard="LVCMOS18" loc="E3"/>
+      <pin index="0" name ="PL_HD_DP_21_P"   iostandard="LVCMOS18" loc="E1"/>
+      <pin index="0" name ="PL_HD_DP_21_N"   iostandard="LVCMOS18" loc="D1"/>
+      <pin index="0" name ="PL_HD_DP_22_P"   iostandard="LVCMOS18" loc="D3"/>
+      <pin index="0" name ="PL_HD_DP_22_N"   iostandard="LVCMOS18" loc="C3"/>
+      <pin index="0" name ="PL_HD_DP_23_P"   iostandard="LVCMOS18" loc="F3"/>
+      <pin index="0" name ="PL_HD_DP_23_N"   iostandard="LVCMOS18" loc="F2"/>
+      <pin index="0" name ="PL_HD_DP_12_GC_P"   iostandard="LVCMOS18" loc="L4"/>
+      <pin index="0" name ="PL_HD_DP_12_GC_N"   iostandard="LVCMOS18" loc="L3"/>
+      <pin index="0" name ="PL_HD_DP_13_GC_P"   iostandard="LVCMOS18" loc="J3"/>
+      <pin index="0" name ="PL_HD_DP_13_GC_N"   iostandard="LVCMOS18" loc="J2"/>
+      
+      <!-- LPDDR4 -->
+      <pin index="0" name ="PS_DDR_CAA0"   loc="AA22"/>
+      <pin index="0" name ="PS_DDR_CAA1"   loc="AB20"/>
+      <pin index="0" name ="PS_DDR_CAA2"   loc="AB17"/>
+      <pin index="0" name ="PS_DDR_CAA3"   loc="AB19"/>
+      <pin index="0" name ="PS_DDR_CAA4"   loc="AB21"/>
+      <pin index="0" name ="PS_DDR_CAA5"   loc="AB16"/>
+      <pin index="0" name ="PS_DDR_CAB0"   loc="Y21"/>
+      <pin index="0" name ="PS_DDR_CAB1"   loc="AA21"/>
+      <pin index="0" name ="PS_DDR_CAB2"   loc="AA18"/>
+      <pin index="0" name ="PS_DDR_CAB3"   loc="AA19"/>
+      <pin index="0" name ="PS_DDR_CAB4"   loc="AA17"/>
+      <pin index="0" name ="PS_DDR_CAB5"   loc="AA16"/>
+      <pin index="0" name ="PS_DDR_CKA_P"   loc="V20"/>
+      <pin index="0" name ="PS_DDR_CKA_N"   loc="W20"/>
+      <pin index="0" name ="PS_DDR_CKB_P"   loc="V18"/>
+      <pin index="0" name ="PS_DDR_CKB_N"   loc="V19"/>
+      <pin index="0" name ="PS_DDR_CKE0"   loc="U22"/>
+      <pin index="0" name ="PS_DDR_CKE1"   loc="U21"/>
+      <pin index="0" name ="PS_DDR_CS0_N"   loc="V22"/>
+      <pin index="0" name ="PS_DDR_CS1_N"   loc="U20"/>
+      <pin index="0" name ="PS_DDR_DMA0"   loc="AB9"/>
+      <pin index="0" name ="PS_DDR_DMA1"   loc="AB14"/>
+      <pin index="0" name ="PS_DDR_DMB0"   loc="U9"/>
+      <pin index="0" name ="PS_DDR_DMB1"   loc="W13"/>
+      <pin index="0" name ="PS_DDR_DQ0"   loc="AB11"/>
+      <pin index="0" name ="PS_DDR_DQ1"   loc="Y10"/>
+      <pin index="0" name ="PS_DDR_DQ2"   loc="AB10"/>
+      <pin index="0" name ="PS_DDR_DQ3"   loc="W10"/>
+      <pin index="0" name ="PS_DDR_DQ4"   loc="AA8"/>
+      <pin index="0" name ="PS_DDR_DQ5"   loc="Y8"/>
+      <pin index="0" name ="PS_DDR_DQ6"   loc="AB7"/>
+      <pin index="0" name ="PS_DDR_DQ7"   loc="AA7"/>
+      <pin index="0" name ="PS_DDR_DQ8"   loc="AA11"/>
+      <pin index="0" name ="PS_DDR_DQ9"   loc="Y11"/>
+      <pin index="0" name ="PS_DDR_DQ10"   loc="AA12"/>
+      <pin index="0" name ="PS_DDR_DQ11"   loc="AB12"/>
+      <pin index="0" name ="PS_DDR_DQ12"   loc="Y14"/>
+      <pin index="0" name ="PS_DDR_DQ13"   loc="AA14"/>
+      <pin index="0" name ="PS_DDR_DQ14"   loc="Y15"/>
+      <pin index="0" name ="PS_DDR_DQ15"   loc="AB15"/>
+      <pin index="0" name ="PS_DDR_DQ16"   loc="W8"/>
+      <pin index="0" name ="PS_DDR_DQ17"   loc="W7"/>
+      <pin index="0" name ="PS_DDR_DQ18"   loc="V7"/>
+      <pin index="0" name ="PS_DDR_DQ19"   loc="V10"/>
+      <pin index="0" name ="PS_DDR_DQ20"   loc="U7"/>
+      <pin index="0" name ="PS_DDR_DQ21"   loc="T9"/>
+      <pin index="0" name ="PS_DDR_DQ22"   loc="U10"/>
+      <pin index="0" name ="PS_DDR_DQ23"   loc="T10"/>
+      <pin index="0" name ="PS_DDR_DQ24"   loc="U11"/>
+      <pin index="0" name ="PS_DDR_DQ25"   loc="U12"/>
+      <pin index="0" name ="PS_DDR_DQ26"   loc="W12"/>
+      <pin index="0" name ="PS_DDR_DQ27"   loc="W11"/>
+      <pin index="0" name ="PS_DDR_DQ28"   loc="V14"/>
+      <pin index="0" name ="PS_DDR_DQ29"   loc="U14"/>
+      <pin index="0" name ="PS_DDR_DQ30"   loc="W15"/>
+      <pin index="0" name ="PS_DDR_DQ31"   loc="V15"/>
+      <pin index="0" name ="PS_DDR_DQSA0_P"   loc="Y9"/>
+      <pin index="0" name ="PS_DDR_DQSA0_N"   loc="AA9"/>
+      <pin index="0" name ="PS_DDR_DQSA1_P"   loc="Y13"/>
+      <pin index="0" name ="PS_DDR_DQSA1_N"   loc="AA13"/>
+      <pin index="0" name ="PS_DDR_DQSB0_P"   loc="V9"/>
+      <pin index="0" name ="PS_DDR_DQSB0_N"   loc="V8"/>
+      <pin index="0" name ="PS_DDR_DQSB1_P"   loc="V12"/>
+      <pin index="0" name ="PS_DDR_DQSB1_N"   loc="V13"/>
+      <pin index="0" name ="PS_DDR_RST_N"   loc="T18"/>
+   </pins>
 </part_info>
