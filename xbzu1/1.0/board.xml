@@ -29,7 +29,7 @@
 
 <images>
   <image 
-	name="ultra96v2_top.jpg" 
+	name="xbzu1_top.png" 
 	display_name="XBoard-ZU1 Single Board Computer" 
 	sub_type="board">
 	<description>XBoard-ZU1 SBC Image</description>
