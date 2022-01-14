@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<!-- <!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/board.dtd"> -->
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
      **     **        **      **    **  **    **  **              **
@@ -20,77 +21,77 @@
  under the License. -->
  
 <board 
-	schema_version="2.2" 
-	vendor="avnet.com" 
-	name="XBoard-ZU1" 
-	display_name="XBoard-ZU1 Single Board Computer" 
-	url="http://avnet.me/XBoard-ZU1" 
-	preset_file="preset.xml">
+   schema_version="2.2" 
+   vendor="avnet.com" 
+   name="XBoard-ZU1" 
+   display_name="XBoard-ZU1 Single Board Computer" 
+   url="http://avnet.me/XBoard-ZU1" 
+   preset_file="preset.xml">
 
-<images>
-  <image 
-	name="xbzu1_top.png" 
-	display_name="XBoard-ZU1 Single Board Computer" 
-	sub_type="board">
-	<description>XBoard-ZU1 SBC Image</description>
-  </image>
-</images>
+   <images>
+      <image 
+         name="xbzu1_top.png" 
+         display_name="XBoard-ZU1 Single Board Computer" 
+         sub_type="board">
+         <description>XBoard-ZU1 SBC Image</description>
+      </image>
+   </images>
 
-<compatible_board_revisions>
-  <revision id="0">Rev 1</revision>
-</compatible_board_revisions>
+   <compatible_board_revisions>
+      <revision id="0">Rev 1</revision>
+   </compatible_board_revisions>
 
-<file_version>1.0</file_version>
+   <file_version>1.0</file_version>
 
-<description>XBoard-ZU1 Single Board Computer</description>
+   <description>XBoard-ZU1 Single Board Computer</description>
 
-<parameters>
-  <parameter 
-	name="heat_sink_type" 
-	value="medium" 
-	value_type="string"/>
-  <parameter 
-	name="heat_sink_temperature" 
-	value_type="range" 
-	value_min="0.0" 
-	value_max="40.0"/>
-</parameters>
+   <parameters>
+      <parameter 
+         name="heat_sink_type" 
+         value="medium" 
+         value_type="string"/>
+      <parameter 
+         name="heat_sink_temperature" 
+         value_type="range" 
+         value_min="0.0" 
+         value_max="40.0"/>
+   </parameters>
 
-<jumpers>
-</jumpers>
+   <jumpers>
+   </jumpers>
 
-<components>   
-  <component 
-	name="part0" 
-	display_name="ZU+ MPSoC" 
-	type="fpga" 
-	part_name="xczu1cg-sbva484-1-e" 
-	pin_map_file="part0_pins.xml" 
-	vendor="xilinx" 
-	spec_url="http://avnet.me/XBoard-ZU1">
-    <description>Zynq UltraScale+ part on the board</description>
-    <interfaces>
-      <interface 
-	mode="master" 
-	name="ps8_fixedio" 
-	type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" 
-	of_component="ps8_fixedio" 
-	preset_proc="zynq_ultra_ps_e_preset"> 
-        <preferred_ips>
-           <preferred_ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" order="0"/>
-        </preferred_ips>
-      </interface>
-    </interfaces> 
-  </component>
-   
-  <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
-</components>
+   <components>   
+      <component 
+         name="part0" 
+         display_name="ZU+ MPSoC" 
+         type="fpga" 
+         part_name="xczu1cg-sbva484-1-e" 
+         pin_map_file="part0_pins.xml" 
+         vendor="xilinx" 
+         spec_url="http://avnet.me/XBoard-ZU1">
+         <description>Zynq UltraScale+ part on the board</description>
+         <interfaces>
+            <interface 
+               mode="master" 
+               name="ps8_fixedio" 
+               type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" 
+               of_component="ps8_fixedio" 
+               preset_proc="zynq_ultra_ps_e_preset"> 
+               <preferred_ips>
+                  <preferred_ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" order="0"/>
+               </preferred_ips>
+            </interface>
+         </interfaces> 
+      </component>
 
-<jtag_chains>
-  <jtag_chain name="chain1">
-    <position name="0" component="part0"/>
-  </jtag_chain>
-</jtag_chains>
+      <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
+   </components>
+
+   <jtag_chains>
+      <jtag_chain name="chain1">
+          <position name="0" component="part0"/>
+      </jtag_chain>
+   </jtag_chains>
 
 </board>
 
