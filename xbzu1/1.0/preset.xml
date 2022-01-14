@@ -67,7 +67,6 @@
             <user_parameter name="CONFIG.PSU__FPD_SLCR__WDT1__FREQMHZ" value="100.000000"/>
             <user_parameter name="CONFIG.PSU__FPD_SLCR__WDT_CLK_SEL__SELECT" value="APB"/>
 
-
             <user_parameter name="CONFIG.PSU__GEM3_COHERENCY" value="0"/>
             <user_parameter name="CONFIG.PSU__GEM3_ROUTE_THROUGH_FPD" value="0"/>
             <user_parameter name="CONFIG.PSU__GEM__TSU__ENABLE" value="0"/>
@@ -135,9 +134,7 @@
             <user_parameter name="CONFIG.PSU__PMU__GPI4__ENABLE" value="0"/>
             <user_parameter name="CONFIG.PSU__PMU__GPI5__ENABLE" value="0"/>
             <user_parameter name="CONFIG.PSU__PMU__GPO0__ENABLE" value="0"/>
-            <user_parameter name="CONFIG.PSU__PMU__GPO0__IO" value="<Select>"/>
             <user_parameter name="CONFIG.PSU__PMU__GPO1__ENABLE" value="0"/>
-            <user_parameter name="CONFIG.PSU__PMU__GPO1__IO" value="<Select>"/>
             <user_parameter name="CONFIG.PSU__PMU__GPO2__ENABLE" value="1"/>
             <user_parameter name="CONFIG.PSU__PMU__GPO2__IO" value="MIO 34"/>
             <user_parameter name="CONFIG.PSU__PMU__GPO2__POLARITY" value="high"/>
