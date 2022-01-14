@@ -211,7 +211,7 @@
             <user_parameter name="CONFIG.PSU__UART1__PERIPHERAL__ENABLE" value="0"/>
 
             <user_parameter name="CONFIG.PSU__USB0_COHERENCY" value="0"/>
-            <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__ENABLE" value="1"/>
+            <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__ENABLE" value="0"/>
             <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__IO" value="MIO 52 .. 63"/>
             <user_parameter name="CONFIG.PSU__USB0__REF_CLK_FREQ" value="26"/>
             <user_parameter name="CONFIG.PSU__USB0__REF_CLK_SEL" value="Ref Clk3"/>
