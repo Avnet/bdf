@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/board.dtd">
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
      **     **        **      **    **  **    **  **              **
@@ -23,7 +24,7 @@
    schema_version="2.2" 
    vendor="avnet.com" 
    name="XBoard-ZU1" 
-   display_name="XBoard-ZU1 Single Board Computer" 
+   display_name="XBoard-ZU1 Development Board" 
    url="http://avnet.me/XBoard-ZU1" 
    preset_file="preset.xml">
 
@@ -42,7 +43,7 @@
 
    <file_version>1.0</file_version>
 
-   <description>XBoard-ZU1 Single Board Computer</description>
+   <description>XBoard-ZU1 Development Board</description>
 
    <parameters>
       <parameter 
@@ -60,37 +61,247 @@
    </jumpers>
 
    <components>   
-      <component 
-         name="part0" 
-         display_name="ZU+ MPSoC" 
-         type="fpga" 
-         part_name="xczu1cg-sbva484-1-e" 
-         pin_map_file="part0_pins.xml" 
-         vendor="xilinx" 
-         spec_url="http://avnet.me/XBoard-ZU1">
+
+      <!-- ZU+ MPSoC -->
+      <component name="part0" display_name="ZU+ MPSoC" type="fpga" part_name="xczu1cg-sbva484-1-e" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://avnet.me/XBoard-ZU1">
          <description>Zynq UltraScale+ part on the board</description>
          <interfaces>
-            <interface 
-               mode="master" 
-               name="ps8_fixedio" 
-               type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" 
-               of_component="ps8_fixedio" 
-               preset_proc="zynq_ultra_ps_e_preset"> 
+
+            <!-- ZU+ PS Fixed I/O -->
+            <interface mode="master" name="ps8_fixedio" type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" of_component="ps8_fixedio" preset_proc="zynq_ultra_ps_e_preset"> 
                <preferred_ips>
                   <preferred_ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" order="0"/>
                </preferred_ips>
             </interface>
-         </interfaces> 
+
+            <!-- MikroE Click I2C -->
+    	    <interface mode="master" name="click_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="click_i2c_pl">
+	          <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="SCL_I" physical_port="click_i2c_main_scl_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_O" physical_port="click_i2c_main_scl_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_T" physical_port="click_i2c_main_scl_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_I" physical_port="click_i2c_main_sda_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_O" physical_port="click_i2c_main_sda_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_T" physical_port="click_i2c_main_sda_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
+    
+            <!-- MikroE Click Interrupt -->
+
+            <!-- MikroE Click PWM -->
+
+            <!-- MikroE Click Reset -->
+
+            <!-- MikroE Click SPI -->
+
+            <!-- MikroE Click UART -->
+
+            <!-- PUSH BUTTON -->
+
+            <!-- TRI-COLOR LEDS -->
+
+            <!-- TEMPERATURE SENSOR I2C -->
+    	    <interface mode="master" name="TempSensor_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="TempSensor_i2c_pl">
+	          <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="SCL_I" physical_port="TempSensor_i2c_main_scl_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SCL"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_O" physical_port="TempSensor_i2c_main_scl_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SCL"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_T" physical_port="TempSensor_i2c_main_scl_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SCL"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_I" physical_port="TempSensor_i2c_main_sda_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SDA"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_O" physical_port="TempSensor_i2c_main_sda_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SDA"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_T" physical_port="TempSensor_i2c_main_sda_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SENSOR_I2C_SDA"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
+
+            <!-- SYZYGY DNA I2C -->
+    	    <interface mode="master" name="SyzygyDNA_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="SyzygyDNA_i2c_pl">
+	          <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="SCL_I" physical_port="SyzygyDNA_i2c_main_scl_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_O" physical_port="SyzygyDNA_i2c_main_scl_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SCL_T" physical_port="SyzygyDNA_i2c_main_scl_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SCL_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_I" physical_port="SyzygyDNA_i2c_main_sda_i" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_O" physical_port="SyzygyDNA_i2c_main_sda_o" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+                <port_map logical_port="SDA_T" physical_port="SyzygyDNA_i2c_main_sda_t" dir="inout">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_SYZYGY_SDA_1V8"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
+
+            <!-- SYZYGY STD PL (J6) -->
+
+            <!-- SYZYGY TRX2 PL (J1) -->
+
+	  	    <!-- SYZYGY TRX2 MIO (J2) -->
+
+			</interfaces> 
       </component>
 
+      <!-- ZU+ PS Fixed I/O -->
       <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
-   </components>
+
+      <!-- MikroE Click I2C -->
+      <component name="click_i2c_pl" display_name="PL click_i2c" type="chip" sub_type="mux" major_group="Miscellaneous">
+        <description>Click I2C</description>
+      </component>
+
+      <!-- MikroE Click Interrupt -->
+
+      <!-- MikroE Click PWM -->
+
+      <!-- MikroE Click Reset -->
+
+      <!-- MikroE Click SPI -->
+
+      <!-- MikroE Click UART -->
+
+      <!-- PUSH BUTTON -->
+
+      <!-- TRI-COLOR LEDS -->
+
+      <!-- TEMPERATURE SENSOR I2C -->
+      <component name="TempSensor_i2c_pl" display_name="PL TempSensor_i2c" type="chip" sub_type="mux" major_group="Miscellaneous">
+        <description>Click I2C</description>
+      </component>
+
+      <!-- SYZYGY DNA I2C -->
+      <component name="SyzygyDNA_i2c_pl" display_name="PL SyzygyDNA_i2c" type="chip" sub_type="mux" major_group="Miscellaneous">
+        <description>Click I2C</description>
+      </component>
+
+      <!-- SYZYGY STD PL (J6) -->
+
+      <!-- SYZYGY TRX2 PL (J1) -->
+
+	  <!-- SYZYGY TRX2 MIO (J2) -->
+
+	  </components>
 
    <jtag_chains>
       <jtag_chain name="chain1">
           <position name="0" component="part0"/>
       </jtag_chain>
    </jtag_chains>
+
+   <connections>
+   <!-- MikroE Click I2C -->
+   <connection name="part0_click_i2c_pl" component1="part0" component2="click_i2c_pl">
+     <connection_map name="part0_click_i2c_pl" typical_delay="5" c1_st_index="0" c1_end_index="1" c2_st_index="0" c2_end_index="1"/>
+   </connection>
+
+   <!-- MikroE Click Interrupt -->
+
+   <!-- MikroE Click PWM -->
+
+   <!-- MikroE Click Reset -->
+
+   <!-- MikroE Click SPI -->
+
+   <!-- MikroE Click UART -->
+
+   <!-- PUSH BUTTON -->
+
+   <!-- TRI-COLOR LEDS -->
+
+   <!-- TEMPERATURE SENSOR I2C -->
+   <connection name="part0_TempSensor_i2c_pl" component1="part0" component2="TempSensor_i2c_pl">
+     <connection_map name="part0_TempSensor_i2c_pl" typical_delay="5" c1_st_index="19" c1_end_index="20" c2_st_index="0" c2_end_index="1"/>
+   </connection>
+
+   <!-- SYZYGY DNA I2C -->
+   <connection name="part0_SyzygyDNA_i2c_pl" component1="part0" component2="SyzygyDNA_i2c_pl">
+     <connection_map name="part0_SyzygyDNA_i2c_pl" typical_delay="5" c1_st_index="21" c1_end_index="22" c2_st_index="0" c2_end_index="1"/>
+   </connection>
+
+   <!-- SYZYGY STD PL (J6) -->
+
+   <!-- SYZYGY TRX2 PL (J1) -->
+
+   <!-- SYZYGY TRX2 MIO (J2) -->
+
+   </connections> 
+ 
+<!-- 
+   <ip_associated_rules>
+   </ip_associated_rules>
+-->
 
 </board>
 
