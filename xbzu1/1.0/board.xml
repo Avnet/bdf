@@ -118,10 +118,42 @@
             <!-- MikroE Click PWM -->
 
             <!-- MikroE Click Reset -->
+			<interface mode="slave" name="click_reset" type="xilinx.com:signal:reset_rtl:1.0" of_component="click_reset">
+			  <parameters>
+				<parameter name="rst_polarity" value="1"/>
+			  </parameters>
+			  <preferred_ips>
+				<preferred_ip vendor="xilinx.com" library="ip" name="proc_sys_reset" order="0"/>
+			  </preferred_ips>
+			  <port_maps>
+				<port_map logical_port="RESET" physical_port="reset" dir="in">
+				  <pin_maps>
+					<pin_map port_index="0" component_pin="HD_CLICK_RST_1V8"/>
+				  </pin_maps>
+				</port_map>
+			  </port_maps>
+			</interface>
 
             <!-- MikroE Click SPI -->
 
             <!-- MikroE Click UART -->
+			<interface mode="master" name="click_uart_pl" type="xilinx.com:interface:uart_rtl:1.0" of_component="click_uart_pl">
+			  <preferred_ips>
+				<preferred_ip vendor="xilinx.com" library="ip" name="axi_uartlite" order="0"/>
+			  </preferred_ips>
+			  <port_maps>
+				<port_map logical_port="TxD" physical_port="rs232_uart_txd" dir="out">
+				  <pin_maps>
+					<pin_map port_index="0" component_pin="HD_CLICK_TX_1V8"/>
+				  </pin_maps>
+				</port_map>
+				<port_map logical_port="RxD" physical_port="rs232_uart_rxd" dir="in">
+				  <pin_maps>
+					<pin_map port_index="0" component_pin="HD_CLICK_RX_1V8"/>
+				  </pin_maps>
+				</port_map>
+			  </port_maps>
+			</interface>
 
             <!-- PUSH BUTTON -->
 
@@ -227,10 +259,20 @@
       <!-- MikroE Click PWM -->
 
       <!-- MikroE Click Reset -->
+      <component name="click_reset" display_name="Click Reset" type="chip" sub_type="system_reset" major_group="Reset" part_name="Click" vendor="MikroE">
+        <description>Click Reset Input</description>
+      </component>
 
       <!-- MikroE Click SPI -->
 
       <!-- MikroE Click UART -->
+      <component name="click_uart_pl" display_name="UART" type="chip" sub_type="uart" major_group="Miscellaneous" part_name="Click" vendor="MikroE">
+        <description>PL UART </description>
+        <pins>
+            <pin index="0" name="USB_uart_TX" iostandard="LVCMOS33"/>
+            <pin index="1" name="USB_uart_RX" iostandard="LVCMOS33"/>
+        </pins>
+      </component>
 
       <!-- PUSH BUTTON -->
 
@@ -271,10 +313,16 @@
    <!-- MikroE Click PWM -->
 
    <!-- MikroE Click Reset -->
+   <connection name="part0_click_reset" component1="part0" component2="click_reset">
+     <connection_map name="part0_click_reset_1" typical_delay="5" c1_st_index="4" c1_end_index="4" component2="click_reset" c2_st_index="0" c2_end_index="0"/>
+   </connection>
 
    <!-- MikroE Click SPI -->
 
    <!-- MikroE Click UART -->
+   <connection name="part0_click_uart_pl" component1="part0" component2="click_uart_pl">
+      <connection_map name="part0_click_uart_pl" typical_delay="5" c1_st_index="10" c1_end_index="11" c2_st_index="0" c2_end_index="1"/>
+   </connection>
 
    <!-- PUSH BUTTON -->
 
