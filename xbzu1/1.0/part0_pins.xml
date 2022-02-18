@@ -29,10 +29,10 @@
       <pin index="3"   name="HD_CLICK_PWM_1V8"       iostandard="LVCMOS18" loc="A8"/>
       <pin index="4"   name="HD_CLICK_RST_1V8"       iostandard="LVCMOS18" loc="A9"/>
       <pin index="5"   name="HD_CLICK_CS0_1V8"       iostandard="LVCMOS18" loc="A2"/>
-      <pin index="6"   name="HD_CLICK_CS1_AN_1V8"    iostandard="LVCMOS18" loc="A3"/>
-      <pin index="7"   name="HD_CLICK_MISO_1V8"      iostandard="LVCMOS18" loc="A6"/>
-      <pin index="8"   name="HD_CLICK_MOSI_1V8"      iostandard="LVCMOS18" loc="A7"/>
-      <pin index="9"   name="HD_CLICK_SCK_1V8"       iostandard="LVCMOS18" loc="B2"/>
+      <pin index="6"   name="HD_CLICK_MISO_1V8"      iostandard="LVCMOS18" loc="A6"/>
+      <pin index="7"   name="HD_CLICK_MOSI_1V8"      iostandard="LVCMOS18" loc="A7"/>
+      <pin index="8"   name="HD_CLICK_SCK_1V8"       iostandard="LVCMOS18" loc="B2"/>
+      <pin index="9"   name="HD_CLICK_CS1_AN_1V8"    iostandard="LVCMOS18" loc="A3"/>
       <pin index="10"  name="HD_CLICK_RX_1V8"        iostandard="LVCMOS18" loc="B1"/>
       <pin index="11"  name="HD_CLICK_TX_1V8"        iostandard="LVCMOS18" loc="B6"/>
 

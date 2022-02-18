@@ -567,6 +567,17 @@
       </ip>
    </ip_preset>
 
+     <ip_preset preset_proc_name="click_spi_pl_preset">
+	<ip vendor="xilinx.com" library="ip" name="axi_quad_spi">
+		<user_parameters>
+			<user_parameter name="CONFIG.C_SPI_MODE" value="0"/>
+			<user_parameter name="CONFIG.C_C_SCK_RATIO" value="16"/>
+			<user_parameter name="CONFIG.C_USE_STARTUP" value="0"/>
+			<user_parameter name="CONFIG.C_USE_STARTUP_INT" value="0"/>
+		</user_parameters>
+	</ip>
+  </ip_preset>
+
 <!--   
   <ip_preset preset_proc_name="click_uart_preset">
     <ip vendor="xilinx.com" library="ip" name="iomodule" ip_interface="UART">
