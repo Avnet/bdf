@@ -200,6 +200,11 @@
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
                   </pin_maps>
                 </port_map>
+                <port_map logical_port="SS1_O" physical_port="spi_ss1_o" dir="out">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_CLICK_CS1_AN_1V8"/> 
+                  </pin_maps>
+                </port_map>
               </port_maps>
             </interface>      
 
@@ -389,7 +394,7 @@
 
    <!-- MikroE Click SPI -->
    <connection name="part0_click_spi_pl" component1="part0" component2="click_spi_pl">
-     <connection_map name="part0_click_spi_pl_1" c1_st_index="5" c1_end_index="8" c2_st_index="0" c2_end_index="3"/>
+     <connection_map name="part0_click_spi_pl_1" c1_st_index="5" c1_end_index="9" c2_st_index="0" c2_end_index="4"/>
    </connection>
 
    <!-- MikroE Click UART -->
