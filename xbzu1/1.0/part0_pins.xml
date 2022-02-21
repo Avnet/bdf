@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<!DOCTYPE part_info SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/part0_pins.dtd">
+<!--<!DOCTYPE part_info SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/part0_pins.dtd">-->
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
      **     **        **      **    **  **    **  **              **
@@ -9,7 +9,7 @@
  **  .........  **        **        **      ****  **********      **
     ...........
                                     Reach Further™
- Copyright (C) 2021, Avnet Inc - All rights reserved
+ Copyright (C) 2022, Avnet Inc - All rights reserved
  Licensed under the Apache License, Version 2.0 (the "License"). You may
  not use this file except in compliance with the License. A copy of the
  License is located at
