@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/board.dtd">
+<!--<!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/board.dtd">-->
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
      **     **        **      **    **  **    **  **              **
@@ -9,7 +9,7 @@
  **  .........  **        **        **      ****  **********      **
     ...........
                                     Reach Further™
- Copyright (C) 2021, Avnet Inc - All rights reserved
+ Copyright (C) 2022, Avnet Inc - All rights reserved
  Licensed under the Apache License, Version 2.0 (the "License"). You may
  not use this file except in compliance with the License. A copy of the
  License is located at
@@ -228,11 +228,54 @@
 			</interface>
 
             <!-- PUSH BUTTON -->
+            <interface mode="master" name="push_button_1bit" type="xilinx.com:interface:gpio_rtl:1.0" of_component="push_button_1bit" preset_proc="push_button_1bit_preset">
+              <description>PL Push Button</description>
+              <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="TRI_I" physical_port="push_button_1bit_tri_i" dir="in">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_GPIO_PB1"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
 
             <!-- TRI-COLOR LEDS -->
+            <interface mode="master" name="rgb1_led_3bits"   type="xilinx.com:interface:gpio_rtl:1.0" of_component="rgb1_led_3bits"   preset_proc="rgb1_led_3bits_preset">
+            <description>PL RGB LED 1</description>
+              <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="TRI_O" physical_port="rgb1_led_3bits_tri_o" dir="out" left="2" right="0">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HD_GPIO_RGB1_B"/>
+                    <pin_map port_index="1" component_pin="HD_GPIO_RGB1_G"/>
+                    <pin_map port_index="2" component_pin="HD_GPIO_RGB1_R"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
+            <interface mode="master" name="rgb2_led_3bits"   type="xilinx.com:interface:gpio_rtl:1.0" of_component="rgb2_led_3bits"   preset_proc="rgb2_led_3bits_preset">
+            <description>PL RGB LED 2</description>
+              <preferred_ips>
+                <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+              </preferred_ips>
+              <port_maps>
+                <port_map logical_port="TRI_O" physical_port="rgb2_led_3bits_tri_o" dir="out" left="2" right="0">
+                  <pin_maps>
+                    <pin_map port_index="0" component_pin="HP_GPIO_RGB2_B"/>
+                    <pin_map port_index="1" component_pin="HP_GPIO_RGB2_G"/>
+                    <pin_map port_index="2" component_pin="HP_GPIO_RGB2_R"/>
+                  </pin_maps>
+                </port_map>
+              </port_maps>
+            </interface>
 
             <!-- TEMPERATURE SENSOR I2C -->
-    	    <interface mode="master" name="TempSensor_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="TempSensor_i2c_pl">
+    	    <interface mode="master" name="tempsensor_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="tempsensor_i2c_pl">
 	          <preferred_ips>
                 <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
               </preferred_ips>
@@ -271,7 +314,7 @@
             </interface>
 
             <!-- SYZYGY DNA I2C -->
-    	    <interface mode="master" name="SyzygyDNA_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="SyzygyDNA_i2c_pl">
+    	    <interface mode="master" name="syzygydna_i2c_pl" type="xilinx.com:interface:iic_rtl:1.0" of_component="syzygydna_i2c_pl">
 	          <preferred_ips>
                 <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
               </preferred_ips>
@@ -322,8 +365,8 @@
       <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
 
       <!-- MikroE Click I2C -->
-      <component name="click_i2c_pl" display_name="PL click_i2c" type="chip" sub_type="mux" major_group="Miscellaneous" part_name="Click" vendor="MikroE">
-        <description>Click I2C</description>
+      <component name="click_i2c_pl" display_name="PL Click I2C" type="chip" sub_type="mux" major_group="Click" part_name="Click" vendor="MikroE">
+        <description>PL Click I2C</description>
       </component>
 
       <!-- MikroE Click Interrupt -->
@@ -331,18 +374,18 @@
       <!-- MikroE Click PWM -->
 
       <!-- MikroE Click Reset -->
-      <component name="click_reset_pl" display_name="Click Reset" type="chip" sub_type="system_reset" major_group="Reset" part_name="Click" vendor="MikroE">
-        <description>Click Reset Input</description>
+      <component name="click_reset_pl" display_name="PL Click Reset" type="chip" sub_type="system_reset" major_group="Click" part_name="Click" vendor="MikroE">
+        <description>PL Click Reset Input</description>
       </component>
 
       <!-- MikroE Click SPI -->
-      <component name="click_spi_pl" display_name="PL Click SPI" type="chip" sub_type="mux" major_group="SPI" part_name="Click" vendor="MikroE">
-          <description>Shield click_spi_pl</description>
+      <component name="click_spi_pl" display_name="PL Click SPI" type="chip" sub_type="mux" major_group="Click" part_name="Click" vendor="MikroE">
+          <description>PL Click SPI</description>
       </component>
 
       <!-- MikroE Click UART -->
-      <component name="click_uart_pl" display_name="UART" type="chip" sub_type="uart" major_group="Miscellaneous" part_name="Click" vendor="MikroE">
-        <description>PL UART </description>
+      <component name="click_uart_pl" display_name="PL Click UART" type="chip" sub_type="uart" major_group="Click" part_name="Click" vendor="MikroE">
+        <description>PL Click UART</description>
         <pins>
             <pin index="0" name="USB_uart_TX" iostandard="LVCMOS33"/>
             <pin index="1" name="USB_uart_RX" iostandard="LVCMOS33"/>
@@ -350,17 +393,26 @@
       </component>
 
       <!-- PUSH BUTTON -->
+      <component name="push_button_1bit" display_name="PL Push Button" type="chip" sub_type="switch" major_group="GPIO" part_name="PTS810SJG250SMTRLFS" vendor="CandK" spec_url="www.ck-components.com">
+        <description>PL Push Button</description>
+      </component>
 
       <!-- TRI-COLOR LEDS -->
+      <component name="rgb1_led_3bits" display_name="PL RGB1 LED" type="chip" sub_type="led" major_group="GPIO" part_name="LRTBGVSR-U4V2-JW+A6BB-D8+S2U2-7Z-20-S" vendor="Osram" spec_url="www.osram.com">
+        <description>PL RGB LED, 2 to 0, Active High</description>
+      </component>
+      <component name="rgb2_led_3bits" display_name="PL RGB2 LED" type="chip" sub_type="led" major_group="GPIO" part_name="LRTBGVSR-U4V2-JW+A6BB-D8+S2U2-7Z-20-S" vendor="Osram" spec_url="www.osram.com">
+        <description>PL RGB LED, 2 to 0, Active High</description>
+      </component>
 
       <!-- TEMPERATURE SENSOR I2C -->
-      <component name="TempSensor_i2c_pl" display_name="PL TempSensor_i2c" type="chip" sub_type="mux" major_group="Miscellaneous" part_name="STTS22HTR" vendor="STMicro">
-        <description>Click I2C</description>
+      <component name="tempsensor_i2c_pl" display_name="PL TempSensor I2C" type="chip" sub_type="mux" major_group="Sensors" part_name="STTS22HTR" vendor="STMicro" spec_url="www.st.com">
+        <description>PL Temp Sensor I2C</description>
       </component>
 
       <!-- SYZYGY DNA I2C -->
-      <component name="SyzygyDNA_i2c_pl" display_name="PL SyzygyDNA_i2c" type="chip" sub_type="mux" major_group="Miscellaneous" part_name="ATTINY44A-MMH" vendor="Microchip">
-        <description>Click I2C</description>
+      <component name="syzygydna_i2c_pl" display_name="PL SyzygyDNA I2C" type="chip" sub_type="mux" major_group="Syzygy" part_name="ATTINY44A-MMH" vendor="Microchip" spec_url="www.microchip.com">
+        <description>Syzygy DNA I2C</description>
       </component>
 
       <!-- SYZYGY STD PL (J6) -->
@@ -403,17 +455,26 @@
    </connection>
 
    <!-- PUSH BUTTON -->
+   <connection name="part0_push_button_1bit" component1="part0" component2="push_button_1bit">
+     <connection_map name="part0_push_button_1bit_1" typical_delay="5" c1_st_index="12" c1_end_index="12" c2_st_index="0" c2_end_index="0"/>
+   </connection>
 
    <!-- TRI-COLOR LEDS -->
+    <connection name="part0_rgb1_led_3bits" component1="part0" component2="rgb1_led_3bits">
+      <connection_map name="part0_rgb1_led_3bits" typical_delay="5" c1_st_index="13" c1_end_index="15" c2_st_index="0" c2_end_index="2"/>
+    </connection>
+    <connection name="part0_rgb2_led_3bits" component1="part0" component2="rgb2_led_3bits">
+      <connection_map name="part0_rgb2_led_3bits" typical_delay="5" c1_st_index="16" c1_end_index="18" c2_st_index="0" c2_end_index="2"/>
+    </connection>
 
    <!-- TEMPERATURE SENSOR I2C -->
-   <connection name="part0_TempSensor_i2c_pl" component1="part0" component2="TempSensor_i2c_pl">
-     <connection_map name="part0_TempSensor_i2c_pl" typical_delay="5" c1_st_index="19" c1_end_index="20" c2_st_index="0" c2_end_index="1"/>
+   <connection name="part0_tempsensor_i2c_pl" component1="part0" component2="tempsensor_i2c_pl">
+     <connection_map name="part0_tempsensor_i2c_pl" typical_delay="5" c1_st_index="19" c1_end_index="20" c2_st_index="0" c2_end_index="1"/>
    </connection>
 
    <!-- SYZYGY DNA I2C -->
-   <connection name="part0_SyzygyDNA_i2c_pl" component1="part0" component2="SyzygyDNA_i2c_pl">
-     <connection_map name="part0_SyzygyDNA_i2c_pl" typical_delay="5" c1_st_index="21" c1_end_index="22" c2_st_index="0" c2_end_index="1"/>
+   <connection name="part0_syzygydna_i2c_pl" component1="part0" component2="syzygydna_i2c_pl">
+     <connection_map name="part0_syzygydna_i2c_pl" typical_delay="5" c1_st_index="21" c1_end_index="22" c2_st_index="0" c2_end_index="1"/>
    </connection>
 
    <!-- SYZYGY STD PL (J6) -->
