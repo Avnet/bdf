@@ -386,10 +386,6 @@
       <!-- MikroE Click UART -->
       <component name="click_uart_pl" display_name="PL Click UART" type="chip" sub_type="uart" major_group="Click" part_name="Click" vendor="MikroE">
         <description>PL Click UART</description>
-        <pins>
-            <pin index="0" name="USB_uart_TX" iostandard="LVCMOS33"/>
-            <pin index="1" name="USB_uart_RX" iostandard="LVCMOS33"/>
-        </pins>
       </component>
 
       <!-- PUSH BUTTON -->

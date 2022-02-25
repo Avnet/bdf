@@ -30,7 +30,9 @@
             
             <user_parameter name="CONFIG.PSU__USE__IRQ0" value="0"/>
             <user_parameter name="CONFIG.PSU__USE__IRQ1" value="0"/>
-            <user_parameter name="CONFIG.PSU__USE__M_AXI_GP0" value="0"/>
+            <user_parameter name="CONFIG.PSU__USE__M_AXI_GP0" value="1"/>
+            <user_parameter name="CONFIG.PSU__USE__M_AXI_GP1" value="1"/>
+            <user_parameter name="CONFIG.PSU__USE__M_AXI_GP2" value="0"/>
             
             <user_parameter name="CONFIG.PSU_BANK_0_IO_STANDARD" value="LVCMOS18"/>
             <user_parameter name="CONFIG.PSU_BANK_1_IO_STANDARD" value="LVCMOS18"/>
@@ -244,8 +246,8 @@
             <user_parameter name="CONFIG.PSU__NAND__READY0_BUSY__ENABLE" value="0"/>
             <user_parameter name="CONFIG.PSU__NAND__READY1_BUSY__ENABLE" value="0"/>
 
-            <user_parameter name="CONFIG.PSU__NUM_FABRIC_RESETS" value="0"/>
-            <user_parameter name="CONFIG.PSU__USE__FABRIC__RST" value="0"/>
+            <user_parameter name="CONFIG.PSU__NUM_FABRIC_RESETS" value="1"/>
+            <user_parameter name="CONFIG.PSU__USE__FABRIC__RST" value="1"/>
 
             <user_parameter name="CONFIG.PSU__PL_CLK0_BUF" value="TRUE"/>
             <user_parameter name="CONFIG.PSU__PL_CLK1_BUF" value="FALSE"/>
