@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<!--<!DOCTYPE part_info SYSTEM "C:/Xilinx/Vivado/2021.2/data/boards/board_schemas/current/part0_pins.dtd">-->
+<!DOCTYPE part_info SYSTEM "C:/Xilinx/Vivado/2021.2/data/boards/board_schemas/current/part0_pins.dtd">
+<!-- -->
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
      **     **        **      **    **  **    **  **              **
@@ -89,7 +90,7 @@
       <pin index="53"  name ="HP_SE_01"              iostandard="LVCMOS12" loc="N3"/>
       <pin index="54"  name ="HP_SE_02"              iostandard="LVCMOS12" loc="H3"/>
 
-      <!-- SYZYGY TRX2 PL (J1) -->
+      <!-- SYZYGY TXR2 PL (J1) -->
       <pin index="55"  name ="HP_DP_01_DBC_N"        iostandard="LVCMOS12" loc="T2"/>
       <pin index="56"  name ="HP_DP_01_DBC_P"        iostandard="LVCMOS12" loc="T3"/>
       <pin index="57"  name ="HP_DP_02_N"            iostandard="LVCMOS12" loc="R3"/>
@@ -113,7 +114,7 @@
       <pin index="75"  name ="HP_DP_24_N"            iostandard="LVCMOS12" loc="C2"/>
       <pin index="76"  name ="HP_DP_24_P"            iostandard="LVCMOS12" loc="D2"/>
 	  
-  	  <!-- SYZYGY TRX2 MIO (J2) -->
+  	  <!-- SYZYGY TXR2 MIO (J2) -->
       <pin index="77"  name ="HD_DP_07_GC_N"         iostandard="LVCMOS18" loc="C5"/>
       <pin index="78"  name ="HD_DP_07_GC_P"         iostandard="LVCMOS18" loc="D5"/>
       <pin index="79"  name ="HD_DP_08_GC_N"         iostandard="LVCMOS18" loc="C7"/>
