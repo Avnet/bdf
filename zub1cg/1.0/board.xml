@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.2/data/boards/board_schemas/current/board.dtd">
+<!--<!DOCTYPE board SYSTEM "C:/Xilinx/Vivado/2021.2/data/boards/board_schemas/current/board.dtd">-->
 <!-- -->
 <!--   ** **        **          **  ****      **  **********  ********** ®   
       **   **        **        **   ** **     **  **              **
@@ -203,7 +203,7 @@
                     <pin_map port_index="0" component_pin="HD_CLICK_SCK_1V8"/> 
                   </pin_maps>
                 </port_map>
-                <port_map logical_port="SS_I" physical_port="HD_CLICK_CS0_1V8" dir="in">
+                <port_map logical_port="SS_I" physical_port="spi_ss_i" dir="in">
                   <pin_maps>
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
                   </pin_maps>
