@@ -31,8 +31,8 @@
 
    <images>
       <image 
-         name="xbzu1_top.png" 
-         display_name="XBoard ZU1 Development Board" 
+         name="zub1cg_top.png" 
+         display_name="ZUBoard 1CG Development Board" 
          sub_type="board">
          <description>ZUBoard 1CG DK Image</description>
       </image>
