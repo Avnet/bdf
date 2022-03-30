@@ -4,20 +4,20 @@
       {
         "infra": {
           "name": "ZUBoard_1CG", 
-          "display": "ZUBoard_1CG Development Board", 
+          "display": "ZUBoard 1CG Development Board", 
           "revision": "1.0", 
-          "description": "ZUBoard_1CG Development Board", 
+          "description": "ZUBoard 1CG Development Board", 
           "company": "avnet.com", 
           "company_display": "Avnet", 
           "author": "Avnet", 
           "contributors": [
             {
               "group": "Avnet", 
-              "url": "http://avnet.me/ZUBoard_1CG"
+              "url": "http://avnet.me/ZUBoard-1CG"
             }
           ], 
           "category": "Evaluation Boards", 
-          "website": "http://avnet.me/ZUBoard_1CG", 
+          "website": "http://avnet.me/ZUBoard-1CG", 
           "search-keywords": [
             "zuboard", 
             "zu1", 

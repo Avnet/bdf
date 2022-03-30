@@ -25,8 +25,8 @@
    schema_version="2.2" 
    vendor="avnet.com" 
    name="ZUBoard_1CG" 
-   display_name="ZUBoard_1CG Development Board" 
-   url="http://avnet.me/ZUBoard_1CG" 
+   display_name="ZUBoard 1CG Development Board" 
+   url="http://avnet.me/ZUBoard-1CG" 
    preset_file="preset.xml">
 
    <images>
@@ -44,7 +44,7 @@
 
    <file_version>1.0</file_version>
 
-   <description>ZUBoard_1CG Development Board</description>
+   <description>ZUBoard 1CG Development Board</description>
 
    <parameters>
    </parameters>
@@ -76,14 +76,14 @@
         <data_property name="DESIGN_POWER_BUDGET" value="45"/>
         <data_property name="HEATSINK"            value="medium"/>
         <data_property name="BOARD_TEMP"          value="40"/>
-        <data_property name="BOARD_LAYERS"        value="12to15"/>
+        <data_property name="BOARD_LAYERS"        value="8to11"/>
     </data_property_group>
   </data_properties>
 
    <components>   
 
       <!-- ZU+ MPSoC -->
-      <component name="part0" display_name="ZU+ MPSoC" type="fpga" part_name="xczu1cg-sbva484-1-e" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://avnet.me/ZUBoard_1CG">
+      <component name="part0" display_name="ZU+ MPSoC" type="fpga" part_name="xczu1cg-sbva484-1-e" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="http://avnet.me/ZUBoard-1CG">
          <description>Zynq UltraScale+ part on the board</description>
          <interfaces>
 
@@ -203,14 +203,16 @@
                     <pin_map port_index="0" component_pin="HD_CLICK_SCK_1V8"/> 
                   </pin_maps>
                 </port_map>
-                <port_map logical_port="SS_I" physical_port="spi_ss_i" dir="in">
+                <port_map logical_port="SS_I" physical_port="spi_ss_i" dir="in" left="1" right="0">
                   <pin_maps>
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
+                    <pin_map port_index="1" component_pin="HD_CLICK_CS1_AN_1V8"/> 
                   </pin_maps>
                 </port_map>
-                <port_map logical_port="SS_O" physical_port="spi_ss_o" dir="out">
+                <port_map logical_port="SS_O" physical_port="spi_ss_o" dir="out" left="1" right="0">
                   <pin_maps>
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
+                    <pin_map port_index="1" component_pin="HD_CLICK_CS1_AN_1V8"/> 
                   </pin_maps>
                 </port_map>
                 <port_map logical_port="SS_T" physical_port="spi_ss_t" dir="out">
@@ -218,11 +220,12 @@
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
                   </pin_maps>
                 </port_map>
-                <port_map logical_port="SS1_O" physical_port="spi_ss1_o" dir="out">
+<!--                 <port_map logical_port="SS1_O" physical_port="spi_ss1_o" dir="out">
                   <pin_maps>
                     <pin_map port_index="0" component_pin="HD_CLICK_CS1_AN_1V8"/> 
                   </pin_maps>
                 </port_map>
+ -->				
               </port_maps>
             </interface>      
 
