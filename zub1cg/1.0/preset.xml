@@ -44,6 +44,7 @@
             <user_parameter name="CONFIG.PSU_MIO_0_INPUT_TYPE"      value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_5_DIRECTION"       value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_5_INPUT_TYPE"      value="cmos"/>
+            <user_parameter name="CONFIG.PSU_MIO_7_PULLUPDOWN"      value="pulldown"/>
             <user_parameter name="CONFIG.PSU_MIO_6_DIRECTION"       value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_6_INPUT_TYPE"      value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_10_DIRECTION"      value="in"/>
@@ -57,6 +58,8 @@
             <user_parameter name="CONFIG.PSU_MIO_22_INPUT_TYPE"     value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_23_DIRECTION"      value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_23_INPUT_TYPE"     value="cmos"/>
+            <user_parameter name="CONFIG.PSU_MIO_24_PULLUPDOWN"     value="pulldown"/>
+            <user_parameter name="CONFIG.PSU_MIO_25_PULLUPDOWN"     value="pulldown"/>
             <user_parameter name="CONFIG.PSU_MIO_26_DIRECTION"      value="in"/>
             <user_parameter name="CONFIG.PSU_MIO_26_DRIVE_STRENGTH" value="12"/>
             <user_parameter name="CONFIG.PSU_MIO_26_SLEW"           value="fast"/>
@@ -70,6 +73,7 @@
             <user_parameter name="CONFIG.PSU_MIO_30_DIRECTION"      value="in"/>
             <user_parameter name="CONFIG.PSU_MIO_30_DRIVE_STRENGTH" value="12"/>
             <user_parameter name="CONFIG.PSU_MIO_30_SLEW"           value="fast"/>
+            <user_parameter name="CONFIG.PSU_MIO_33_PULLUPDOWN"     value="pulldown"/>
             <user_parameter name="CONFIG.PSU_MIO_34_DIRECTION"      value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_34_INPUT_TYPE"     value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_45_DIRECTION"      value="in"/>

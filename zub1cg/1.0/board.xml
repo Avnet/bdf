@@ -220,12 +220,6 @@
                     <pin_map port_index="0" component_pin="HD_CLICK_CS0_1V8"/> 
                   </pin_maps>
                 </port_map>
-<!--                 <port_map logical_port="SS1_O" physical_port="spi_ss1_o" dir="out">
-                  <pin_maps>
-                    <pin_map port_index="0" component_pin="HD_CLICK_CS1_AN_1V8"/> 
-                  </pin_maps>
-                </port_map>
- -->				
               </port_maps>
             </interface>      
 
@@ -372,13 +366,9 @@
                 </port_map>
               </port_maps>
             </interface>
-
             <!-- SYZYGY STD PL (J6) -->
-
             <!-- SYZYGY TXR2 PL (J1) -->
-
-                <!-- SYZYGY TXR2 MIO (J2) -->
-
+            <!-- SYZYGY TXR2 MIO (J2) -->
          </interfaces> 
       </component>
 
