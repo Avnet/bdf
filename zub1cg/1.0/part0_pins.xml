@@ -24,6 +24,7 @@
 <part_info part_name="xczu1cg-sbva484-1-e">
    <pins>
       <!-- MikroE Click Interface -->
+	  <!-- ZUBoard 1CG has external pull-ups on SCL/SDA, so internal pull-ups not required -->
       <pin index="0"   name ="HD_CLICK_SCL_1V8"      iostandard="LVCMOS18" loc="F8"/>
       <pin index="1"   name ="HD_CLICK_SDA_1V8"      iostandard="LVCMOS18" loc="F7"/>
       <pin index="2"   name ="HD_CLICK_INT_1V8"      iostandard="LVCMOS18" loc="E8"/>
@@ -49,10 +50,12 @@
       <pin index="18"  name ="HP_GPIO_RGB2_R"        iostandard="LVCMOS12" loc="B4"/>
 
       <!-- TEMPERATURE SENSOR I2C -->
+	  <!-- ZUBoard 1CG has external pull-ups on SCL/SDA, so internal pull-ups not required -->
       <pin index="19"  name ="HD_SENSOR_I2C_SCL"     iostandard="LVCMOS18" loc="A6"/>
       <pin index="20"  name ="HD_SENSOR_I2C_SDA"     iostandard="LVCMOS18" loc="B7"/>
 
       <!-- SYZYGY DNA ALL -->
+	  <!-- ZUBoard 1CG has external pull-ups on SCL/SDA, so internal pull-ups not required -->
       <pin index="21"  name ="HD_SYZYGY_SCL_1V8"     iostandard="LVCMOS18" loc="B9"/>
       <pin index="22"  name ="HD_SYZYGY_SDA_1V8"     iostandard="LVCMOS18" loc="A9"/>
 
