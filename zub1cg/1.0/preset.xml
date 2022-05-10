@@ -53,7 +53,7 @@
             <user_parameter name="CONFIG.PSU_MIO_11_DIRECTION"      value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_11_INPUT_TYPE"     value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_12_INPUT_TYPE"     value="cmos"/>
-            <user_parameter name="CONFIG.PSU_MIO_12_PULLUPDOWN"     value="pulldown"/>
+            <user_parameter name="CONFIG.PSU_MIO_12_PULLUPDOWN"     value="pullup"/>
             <user_parameter name="CONFIG.PSU_MIO_22_DIRECTION"      value="out"/>
             <user_parameter name="CONFIG.PSU_MIO_22_INPUT_TYPE"     value="cmos"/>
             <user_parameter name="CONFIG.PSU_MIO_23_DIRECTION"      value="out"/>
