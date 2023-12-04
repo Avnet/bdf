@@ -1,0 +1,34 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "ved2302_iocc", 
+          "display": "Versal VE2302 IOCC Evaluation Platform", 
+          "revision": "0.1", 
+          "description": "Versal VE2302 IOCC Evaluation Platform", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Radaele", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/ve2302_iocc", 
+          "search-keywords": [
+            "ve2302_iocc", 
+            "avnet.com", 
+            "board",
+            "Evaluation Boards", 
+            "Multiple Parts"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}
