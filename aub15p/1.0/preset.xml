@@ -543,16 +543,23 @@
     </ip>
   </ip_preset>
 
-  <!-- RGMII Ethernet -->
-  <ip_preset preset_proc_name="rgmii_ethernet_preset">
-    <ip vendor="xilinx.com" library="ip" name="axi_ethernet" ip_interface="RGMII">
+  <!-- MII Ethernet -->
+  <ip_preset preset_proc_name="mii_ethernet_preset">
+    <ip vendor="xilinx.com" library="ip" name="axi_ethernetlite" ip_interface="MII">
       <user_parameters>
-        <user_parameter name="CONFIG.PHY_TYPE" value="RGMII"/> 
+        <user_parameter name="CONFIG.C_S_AXI_PROTOCOL" value="AXI4LITE"/> 
+        <user_parameter name="CONFIG.C_INCLUDE_GLOBAL_BUFFERS" value="1"/> 
+        <user_parameter name="CONFIG.C_INCLUDE_MDIO" value="1"/> 
       </user_parameters>
     </ip>
-    <ip vendor="xilinx.com" library="ip" name="tri_mode_ethernet_mac" ip_interface="RGMII">
+    <ip vendor="xilinx.com" library="ip" name="axi_ethernet" ip_interface="MII">
       <user_parameters>
-        <user_parameter name="CONFIG.PHYSICAL_INTERFACE" value="RGMII"/> 
+        <user_parameter name="CONFIG.PHY_TYPE" value="MII"/> 
+      </user_parameters>
+    </ip>
+    <ip vendor="xilinx.com" library="ip" name="tri_mode_ethernet_mac" ip_interface="MII">
+      <user_parameters>
+        <user_parameter name="CONFIG.PHYSICAL_INTERFACE" value="MII"/> 
       </user_parameters>
     </ip>
   </ip_preset>

@@ -333,53 +333,79 @@
           </port_maps>
         </interface>
         
-        <!-- RGMII Ethernet -->
-        <interface mode="master" name="rgmii_ethernet" type="xilinx.com:interface:rgmii_rtl:1.0" of_component="rgmii_ethernet" preset_proc="rgmii_ethernet_preset">
-          <description>Ethernet PHY in RGMII mode. </description>
+        <!-- MII Ethernet -->
+        <interface mode="master" name="mii_ethernet" type="xilinx.com:interface:mii_rtl:1.0" of_component="mii_ethernet" preset_proc="mii_ethernet_preset">
+          <description>Ethernet PHY in MII mode. </description>
           <preferred_ips>
-            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernetlite" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="1"/>
           </preferred_ips>
           <port_maps>
-            <port_map logical_port="TD" physical_port="rgmii_td" dir="out" left="3" right="0">
+            <port_map logical_port="TXD" physical_port="phy_tx_data" dir="out" left="3" right="0"> 
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_TXD0"/>
-                <pin_map port_index="1" component_pin="ENET_TXD1"/>
-                <pin_map port_index="2" component_pin="ENET_TXD2"/>
-                <pin_map port_index="3" component_pin="ENET_TXD3"/>
+                <pin_map port_index="0" component_pin="ENET_TXD0"/> 
+                <pin_map port_index="1" component_pin="ENET_TXD1"/> 
+                <pin_map port_index="2" component_pin="ENET_TXD2"/> 
+                <pin_map port_index="3" component_pin="ENET_TXD3"/> 
               </pin_maps>
             </port_map>
-            <port_map logical_port="TX_CTL" physical_port="rgmii_tx_ctl" dir="out">
+            <port_map logical_port="TX_EN" physical_port="phy_tx_en" dir="out">
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_TX_CTL"/>
+                <pin_map port_index="0" component_pin="ENET_TX_EN"/> 
               </pin_maps>
             </port_map>
-            <port_map logical_port="TXC" physical_port="rgmii_txc" dir="out" name="rgmii_txc">
+            <port_map logical_port="TX_ER" physical_port="phy_tx_er" dir="out">
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_TXC"/>
+                <pin_map port_index="0" component_pin="ENET_TX_ER"/> 
               </pin_maps>
             </port_map>
-            <port_map logical_port="RD" physical_port="rgmii_rd" dir="out" left="3" right="0">
+            <port_map logical_port="RXD" physical_port="phy_rx_data" dir="in" left="3" right="0"> 
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_RXD0"/>
-                <pin_map port_index="1" component_pin="ENET_RXD1"/>
-                <pin_map port_index="2" component_pin="ENET_RXD2"/>
-                <pin_map port_index="3" component_pin="ENET_RXD3"/>
+                <pin_map port_index="0" component_pin="ENET_RXD0"/> 
+                <pin_map port_index="1" component_pin="ENET_RXD1"/> 
+                <pin_map port_index="2" component_pin="ENET_RXD2"/> 
+                <pin_map port_index="3" component_pin="ENET_RXD3"/> 
               </pin_maps>
             </port_map>
-            <port_map logical_port="RX_CTL" physical_port="rgmii_rx_ctl" dir="in">
+            <port_map logical_port="RX_DV" physical_port="phy_dv" dir="in">
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_RX_CTL"/>
+                <pin_map port_index="0" component_pin="ENET_RX_DV"/> 
               </pin_maps>
             </port_map>
-            <port_map logical_port="RXC" physical_port="rgmii_rxc" dir="in">
+            <port_map logical_port="RX_ER" physical_port="phy_rx_er" dir="in">
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_RXC"/>
+                <pin_map port_index="0" component_pin="ENET_RX_ER"/> 
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CRS" physical_port="phy_crs" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="ENET_CRS"/> 
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="COL" physical_port="phy_col" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="ENET_COL"/> 
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TX_CLK" physical_port="phy_tx_clk" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="ENET_TX_CLK"/> 
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RX_CLK" physical_port="phy_rx_clk" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="ENET_RX_CLK"/> 
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RST_N" physical_port="phy_rst_n" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="ENET_RST_N"/> 
               </pin_maps>
             </port_map>
           </port_maps>
         </interface>
 
-        <interface mode="master" name="mdio_io" type="xilinx.com:interface:mdio_rtl:1.0" of_component="rgmii_ethernet">
+        <interface mode="master" name="mdio_io" type="xilinx.com:interface:mdio_rtl:1.0" of_component="mii_ethernet">
           <description>Secondary interface to communicate with Ethernet PHY. </description>
           <preferred_ips>
             <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
@@ -408,14 +434,17 @@
           </port_maps>
         </interface>
 
-        <interface mode="master" name="phy_reset_out" type="xilinx.com:signal:reset_rtl:1.0" of_component="rgmii_ethernet">
+        <interface mode="slave" name="phy_reset_out" type="xilinx.com:signal:reset_rtl:1.0" of_component="mii_ethernet">
+          <parameters>
+            <parameter name="rst_polarity" value="0"/>
+          </parameters>
           <preferred_ips>
             <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
           </preferred_ips>
           <port_maps>
-            <port_map logical_port="RST" physical_port="phy_rst_out" dir="out">
+            <port_map logical_port="RST" physical_port="phy_rst_n" dir="out">
               <pin_maps>
-                <pin_map port_index="0" component_pin="ENET_RST"/> 
+                <pin_map port_index="0" component_pin="ENET_RST_N"/> 
               </pin_maps>
             </port_map>
           </port_maps>
@@ -906,18 +935,19 @@
       <description>RGB LED, Active High</description>
     </component>
 
-    <!-- RGMII Ethernet -->
-    <component name="rgmii_ethernet" display_name="Ethernet PHY" type="chip" sub_type="ethernet" major_group="Ethernet Configurations" part_name="KSZ9131RNXCA" vendor="Microchip" spec_url="www.microchip.com">
-      <description>Ethernet 10/100/1000 RGMII PHY</description>
+    <!-- MII Ethernet -->
+    <component name="mii_ethernet" display_name="Ethernet PHY" type="chip" sub_type="ethernet" major_group="Ethernet Configurations" part_name="KSZ8091MNXCA" vendor="Microchip" spec_url="www.microchip.com">
+      <description>Ethernet 10/100 MII PHY</description>
       <component_modes>
-        <component_mode name="rgmii" display_name="RGMII">
+        <component_mode name="mii" display_name="MII">
           <interfaces>
-            <interface name="rgmii_ethernet"/>
+            <interface name="mii_ethernet"/>
             <interface name="mdio_io" optional="true"/>
             <interface name="phy_reset_out" optional="true"/>
           </interfaces>
           <preferred_ips>
-            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernetlite" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="1"/>
           </preferred_ips>
         </component_mode>
       </component_modes>
@@ -1038,6 +1068,9 @@
           <interfaces>
             <interface name="ddr4_sdram"/>
             <interface name="system_clock_300mhz" optional="true"/>
+<!--
+            <interface name="system_reset" optional="true"/>
+-->
           </interfaces>
         </component_mode>
       </component_modes>
@@ -1046,104 +1079,104 @@
     <!-- FMC HPC -->
     <component name="fmc_hpc_connector" display_name="FMC_HPC" type="connector" sub_type="fmc_hpc">
       <pins>
-        <pin index="202" name="fmc_hpc_dp1_m2c_p"></pin> <!-- A2 -->
-        <pin index="203" name="fmc_hpc_dp1_m2c_n"></pin> <!-- A3 -->
-        <pin index="206" name="fmc_hpc_dp2_m2c_p"></pin> <!-- A6 -->
-        <pin index="207" name="fmc_hpc_dp2_m2c_n"></pin> <!-- A7 -->
-        <pin index="210" name="fmc_hpc_dp3_m2c_p"></pin> <!-- A10 -->
-        <pin index="211" name="fmc_hpc_dp3_m2c_n"></pin> <!-- A11 -->
-        <pin index="222" name="fmc_hpc_dp1_c2m_p"></pin> <!-- A22 -->
-        <pin index="223" name="fmc_hpc_dp1_c2m_n"></pin> <!-- A23 -->
-        <pin index="226" name="fmc_hpc_dp2_c2m_p"></pin> <!-- A26 -->
-        <pin index="227" name="fmc_hpc_dp2_c2m_n"></pin> <!-- A27 -->
-        <pin index="230" name="fmc_hpc_dp3_c2m_p"></pin> <!-- A30 -->
-        <pin index="231" name="fmc_hpc_dp3_c2m_n"></pin> <!-- A31 -->
-    
-        <pin index="260" name="fmc_hpc_gbtclk1_m2c_p"></pin> <!-- B20 -->
-        <pin index="261" name="fmc_hpc_gbtclk1_m2c_n"></pin> <!-- B21 -->
-    
-        <pin index="282" name="fmc_hpc_dp0_c2m_p"></pin> <!-- C2 -->
-        <pin index="283" name="fmc_hpc_dp0_c2m_n"></pin> <!-- C3 -->
-        <pin index="286" name="fmc_hpc_dp0_m2c_p"></pin> <!-- C6 -->
-        <pin index="287" name="fmc_hpc_dp0_m2c_n"></pin> <!-- C7 -->
-        <pin index="290" name="fmc_hpc_la06_p"></pin> <!-- C10 -->
-        <pin index="291" name="fmc_hpc_la06_n"></pin> <!-- C11 -->
-        <pin index="294" name="fmc_hpc_la10_p"></pin> <!-- C14 -->
-        <pin index="295" name="fmc_hpc_la10_n"></pin> <!-- C15 -->
-        <pin index="298" name="fmc_hpc_la14_p"></pin> <!-- C18 -->
-        <pin index="299" name="fmc_hpc_la14_n"></pin> <!-- C19 -->
-        <pin index="302" name="fmc_hpc_la18_p"></pin> <!-- C22 -->
-        <pin index="303" name="fmc_hpc_la18_n"></pin> <!-- C23 -->
-        <pin index="306" name="fmc_hpc_la27_p"></pin> <!-- C26 -->
-        <pin index="307" name="fmc_hpc_la27_n"></pin> <!-- C27 -->
-    
-        <pin index="324" name="fmc_hpc_gbtclk0_m2c_p"></pin> <!-- D4 -->
-        <pin index="325" name="fmc_hpc_gbtclk0_m2c_n"></pin> <!-- D5 -->
-        <pin index="328" name="fmc_hpc_la01_p"></pin> <!-- D8 -->
-        <pin index="329" name="fmc_hpc_la01_n"></pin> <!-- D9 -->
-        <pin index="331" name="fmc_hpc_la05_p"></pin> <!-- D11 -->
-        <pin index="332" name="fmc_hpc_la05_n"></pin> <!-- D12 -->
-        <pin index="334" name="fmc_hpc_la09_p"></pin> <!-- D14 -->
-        <pin index="335" name="fmc_hpc_la09_n"></pin> <!-- D15 -->
-        <pin index="337" name="fmc_hpc_la13_p"></pin> <!-- D17 -->
-        <pin index="338" name="fmc_hpc_la13_n"></pin> <!-- D18 -->
-        <pin index="340" name="fmc_hpc_la17_p"></pin> <!-- D20 -->
-        <pin index="341" name="fmc_hpc_la17_n"></pin> <!-- D21 -->
-        <pin index="343" name="fmc_hpc_la23_p"></pin> <!-- D23 -->
-        <pin index="344" name="fmc_hpc_la23_n"></pin> <!-- D24 -->
-        <pin index="346" name="fmc_hpc_la26_p"></pin> <!-- D26 -->
-        <pin index="347" name="fmc_hpc_la26_n"></pin> <!-- D27 -->
-    
-        <pin index="442" name="fmc_hpc_clk1_m2c_p"></pin> <!-- G2 -->
-        <pin index="443" name="fmc_hpc_clk1_m2c_n"></pin> <!-- G3 -->
-        <pin index="446" name="fmc_hpc_la00_p"></pin> <!-- G6 -->
-        <pin index="447" name="fmc_hpc_la00_n"></pin> <!-- G7 -->
-        <pin index="449" name="fmc_hpc_la03_p"></pin> <!-- G9 -->
-        <pin index="450" name="fmc_hpc_la03_n"></pin> <!-- G10 -->
-        <pin index="452" name="fmc_hpc_la08_p"></pin> <!-- G12 -->
-        <pin index="453" name="fmc_hpc_la08_n"></pin> <!-- G13 -->
-        <pin index="455" name="fmc_hpc_la12_p"></pin> <!-- G15 -->
-        <pin index="456" name="fmc_hpc_la12_n"></pin> <!-- G16 -->
-        <pin index="458" name="fmc_hpc_la16_p"></pin> <!-- G18 -->
-        <pin index="459" name="fmc_hpc_la16_n"></pin> <!-- G19 -->
-        <pin index="461" name="fmc_hpc_la20_p"></pin> <!-- G21 -->
-        <pin index="462" name="fmc_hpc_la20_n"></pin> <!-- G22 -->
-        <pin index="464" name="fmc_hpc_la22_p"></pin> <!-- G24 -->
-        <pin index="465" name="fmc_hpc_la22_n"></pin> <!-- G25 -->
-        <pin index="467" name="fmc_hpc_la25_p"></pin> <!-- G27 -->
-        <pin index="468" name="fmc_hpc_la25_n"></pin> <!-- G28 -->
-        <pin index="470" name="fmc_hpc_la29_p"></pin> <!-- G30 -->
-        <pin index="471" name="fmc_hpc_la29_n"></pin> <!-- G31 -->
-        <pin index="473" name="fmc_hpc_la31_p"></pin> <!-- G33 -->
-        <pin index="474" name="fmc_hpc_la31_n"></pin> <!-- G34 -->
-        <pin index="476" name="fmc_hpc_la33_p"></pin> <!-- G36 -->
-        <pin index="477" name="fmc_hpc_la33_n"></pin> <!-- G37 -->
-        
-        <pin index="482" name="fmc_hpc_prsnt_m2c_b_ls"></pin> <!-- H2 -->
-        <pin index="484" name="fmc_hpc_clk0_m2c_p"></pin> <!-- H4 -->
-        <pin index="485" name="fmc_hpc_clk0_m2c_n"></pin> <!-- H5 -->
-        <pin index="487" name="fmc_hpc_la02_p"></pin> <!-- H7 -->
-        <pin index="488" name="fmc_hpc_la02_n"></pin> <!-- H8 -->
-        <pin index="490" name="fmc_hpc_la04_p"></pin> <!-- H10 -->
-        <pin index="491" name="fmc_hpc_la04_n"></pin> <!-- H11 -->
-        <pin index="493" name="fmc_hpc_la07_p"></pin> <!-- H13 -->
-        <pin index="494" name="fmc_hpc_la07_n"></pin> <!-- H14 -->
-        <pin index="496" name="fmc_hpc_la11_p"></pin> <!-- H16 -->
-        <pin index="497" name="fmc_hpc_la11_n"></pin> <!-- H17 -->
-        <pin index="499" name="fmc_hpc_la15_p"></pin> <!-- H19 -->
-        <pin index="500" name="fmc_hpc_la15_n"></pin> <!-- H20 -->
-        <pin index="502" name="fmc_hpc_la19_p"></pin> <!-- H22 -->
-        <pin index="503" name="fmc_hpc_la19_n"></pin> <!-- H23 -->
-        <pin index="505" name="fmc_hpc_la21_p"></pin> <!-- H25 -->
-        <pin index="506" name="fmc_hpc_la21_n"></pin> <!-- H26 -->
-        <pin index="508" name="fmc_hpc_la24_p"></pin> <!-- H28 -->
-        <pin index="509" name="fmc_hpc_la24_n"></pin> <!-- H29 -->
-        <pin index="511" name="fmc_hpc_la28_p"></pin> <!-- H31 -->
-        <pin index="512" name="fmc_hpc_la28_n"></pin> <!-- H32 -->
-        <pin index="514" name="fmc_hpc_la30_p"></pin> <!-- H34 -->
-        <pin index="515" name="fmc_hpc_la30_n"></pin> <!-- H35 -->
-        <pin index="517" name="fmc_hpc_la32_p"></pin> <!-- H37 -->
-        <pin index="518" name="fmc_hpc_la32_n"></pin> <!-- H38 -->
+        <pin index="151" name="fmc_hpc_dp1_m2c_p"></pin> <!-- A2 -->
+        <pin index="152" name="fmc_hpc_dp1_m2c_n"></pin> <!-- A3 -->
+        <pin index="153" name="fmc_hpc_dp2_m2c_p"></pin> <!-- A6 -->
+        <pin index="154" name="fmc_hpc_dp2_m2c_n"></pin> <!-- A7 -->
+        <pin index="155" name="fmc_hpc_dp3_m2c_p"></pin> <!-- A10 -->
+        <pin index="156" name="fmc_hpc_dp3_m2c_n"></pin> <!-- A11 -->
+        <pin index="157" name="fmc_hpc_dp1_c2m_p"></pin> <!-- A22 -->
+        <pin index="158" name="fmc_hpc_dp1_c2m_n"></pin> <!-- A23 -->
+        <pin index="159" name="fmc_hpc_dp2_c2m_p"></pin> <!-- A26 -->
+        <pin index="160" name="fmc_hpc_dp2_c2m_n"></pin> <!-- A27 -->
+        <pin index="161" name="fmc_hpc_dp3_c2m_p"></pin> <!-- A30 -->
+        <pin index="162" name="fmc_hpc_dp3_c2m_n"></pin> <!-- A31 -->
+                       
+        <pin index="163" name="fmc_hpc_gbtclk1_m2c_p"></pin> <!-- B20 -->
+        <pin index="164" name="fmc_hpc_gbtclk1_m2c_n"></pin> <!-- B21 -->
+                       
+        <pin index="165" name="fmc_hpc_dp0_c2m_p"></pin> <!-- C2 -->
+        <pin index="166" name="fmc_hpc_dp0_c2m_n"></pin> <!-- C3 -->
+        <pin index="167" name="fmc_hpc_dp0_m2c_p"></pin> <!-- C6 -->
+        <pin index="168" name="fmc_hpc_dp0_m2c_n"></pin> <!-- C7 -->
+        <pin index="169" name="fmc_hpc_la06_p"></pin> <!-- C10 -->
+        <pin index="170" name="fmc_hpc_la06_n"></pin> <!-- C11 -->
+        <pin index="171" name="fmc_hpc_la10_p"></pin> <!-- C14 -->
+        <pin index="172" name="fmc_hpc_la10_n"></pin> <!-- C15 -->
+        <pin index="173" name="fmc_hpc_la14_p"></pin> <!-- C18 -->
+        <pin index="174" name="fmc_hpc_la14_n"></pin> <!-- C19 -->
+        <pin index="175" name="fmc_hpc_la18_p"></pin> <!-- C22 -->
+        <pin index="176" name="fmc_hpc_la18_n"></pin> <!-- C23 -->
+        <pin index="177" name="fmc_hpc_la27_p"></pin> <!-- C26 -->
+        <pin index="178" name="fmc_hpc_la27_n"></pin> <!-- C27 -->
+                       
+        <pin index="179" name="fmc_hpc_gbtclk0_m2c_p"></pin> <!-- D4 -->
+        <pin index="180" name="fmc_hpc_gbtclk0_m2c_n"></pin> <!-- D5 -->
+        <pin index="181" name="fmc_hpc_la01_p"></pin> <!-- D8 -->
+        <pin index="182" name="fmc_hpc_la01_n"></pin> <!-- D9 -->
+        <pin index="183" name="fmc_hpc_la05_p"></pin> <!-- D11 -->
+        <pin index="184" name="fmc_hpc_la05_n"></pin> <!-- D12 -->
+        <pin index="185" name="fmc_hpc_la09_p"></pin> <!-- D14 -->
+        <pin index="186" name="fmc_hpc_la09_n"></pin> <!-- D15 -->
+        <pin index="187" name="fmc_hpc_la13_p"></pin> <!-- D17 -->
+        <pin index="188" name="fmc_hpc_la13_n"></pin> <!-- D18 -->
+        <pin index="189" name="fmc_hpc_la17_p"></pin> <!-- D20 -->
+        <pin index="190" name="fmc_hpc_la17_n"></pin> <!-- D21 -->
+        <pin index="191" name="fmc_hpc_la23_p"></pin> <!-- D23 -->
+        <pin index="192" name="fmc_hpc_la23_n"></pin> <!-- D24 -->
+        <pin index="193" name="fmc_hpc_la26_p"></pin> <!-- D26 -->
+        <pin index="194" name="fmc_hpc_la26_n"></pin> <!-- D27 -->
+                       
+        <pin index="195" name="fmc_hpc_clk1_m2c_p"></pin> <!-- G2 -->
+        <pin index="196" name="fmc_hpc_clk1_m2c_n"></pin> <!-- G3 -->
+        <pin index="197" name="fmc_hpc_la00_p"></pin> <!-- G6 -->
+        <pin index="198" name="fmc_hpc_la00_n"></pin> <!-- G7 -->
+        <pin index="199" name="fmc_hpc_la03_p"></pin> <!-- G9 -->
+        <pin index="200" name="fmc_hpc_la03_n"></pin> <!-- G10 -->
+        <pin index="201" name="fmc_hpc_la08_p"></pin> <!-- G12 -->
+        <pin index="202" name="fmc_hpc_la08_n"></pin> <!-- G13 -->
+        <pin index="203" name="fmc_hpc_la12_p"></pin> <!-- G15 -->
+        <pin index="204" name="fmc_hpc_la12_n"></pin> <!-- G16 -->
+        <pin index="205" name="fmc_hpc_la16_p"></pin> <!-- G18 -->
+        <pin index="206" name="fmc_hpc_la16_n"></pin> <!-- G19 -->
+        <pin index="207" name="fmc_hpc_la20_p"></pin> <!-- G21 -->
+        <pin index="208" name="fmc_hpc_la20_n"></pin> <!-- G22 -->
+        <pin index="209" name="fmc_hpc_la22_p"></pin> <!-- G24 -->
+        <pin index="210" name="fmc_hpc_la22_n"></pin> <!-- G25 -->
+        <pin index="211" name="fmc_hpc_la25_p"></pin> <!-- G27 -->
+        <pin index="212" name="fmc_hpc_la25_n"></pin> <!-- G28 -->
+        <pin index="213" name="fmc_hpc_la29_p"></pin> <!-- G30 -->
+        <pin index="214" name="fmc_hpc_la29_n"></pin> <!-- G31 -->
+        <pin index="215" name="fmc_hpc_la31_p"></pin> <!-- G33 -->
+        <pin index="216" name="fmc_hpc_la31_n"></pin> <!-- G34 -->
+        <pin index="217" name="fmc_hpc_la33_p"></pin> <!-- G36 -->
+        <pin index="218" name="fmc_hpc_la33_n"></pin> <!-- G37 -->
+                       
+        <pin index="219" name="fmc_hpc_prsnt_m2c_b_ls"></pin> <!-- H2 -->
+        <pin index="220" name="fmc_hpc_clk0_m2c_p"></pin> <!-- H4 -->
+        <pin index="221" name="fmc_hpc_clk0_m2c_n"></pin> <!-- H5 -->
+        <pin index="222" name="fmc_hpc_la02_p"></pin> <!-- H7 -->
+        <pin index="223" name="fmc_hpc_la02_n"></pin> <!-- H8 -->
+        <pin index="224" name="fmc_hpc_la04_p"></pin> <!-- H10 -->
+        <pin index="225" name="fmc_hpc_la04_n"></pin> <!-- H11 -->
+        <pin index="226" name="fmc_hpc_la07_p"></pin> <!-- H13 -->
+        <pin index="227" name="fmc_hpc_la07_n"></pin> <!-- H14 -->
+        <pin index="228" name="fmc_hpc_la11_p"></pin> <!-- H16 -->
+        <pin index="229" name="fmc_hpc_la11_n"></pin> <!-- H17 -->
+        <pin index="230" name="fmc_hpc_la15_p"></pin> <!-- H19 -->
+        <pin index="231" name="fmc_hpc_la15_n"></pin> <!-- H20 -->
+        <pin index="232" name="fmc_hpc_la19_p"></pin> <!-- H22 -->
+        <pin index="233" name="fmc_hpc_la19_n"></pin> <!-- H23 -->
+        <pin index="234" name="fmc_hpc_la21_p"></pin> <!-- H25 -->
+        <pin index="235" name="fmc_hpc_la21_n"></pin> <!-- H26 -->
+        <pin index="236" name="fmc_hpc_la24_p"></pin> <!-- H28 -->
+        <pin index="237" name="fmc_hpc_la24_n"></pin> <!-- H29 -->
+        <pin index="238" name="fmc_hpc_la28_p"></pin> <!-- H31 -->
+        <pin index="239" name="fmc_hpc_la28_n"></pin> <!-- H32 -->
+        <pin index="240" name="fmc_hpc_la30_p"></pin> <!-- H34 -->
+        <pin index="241" name="fmc_hpc_la30_n"></pin> <!-- H35 -->
+        <pin index="242" name="fmc_hpc_la32_p"></pin> <!-- H37 -->
+        <pin index="243" name="fmc_hpc_la32_n"></pin> <!-- H38 -->
       </pins>
     </component>
 
@@ -1204,9 +1237,9 @@
       <connection_map name="part0_rgb_led2" c1_st_index="26" c1_end_index="28" c2_st_index="0" c2_end_index="2"/>
     </connection>
     
-    <!-- RGMII Ethernet -->
-    <connection name="part0_rgmii_ethernet" component1="part0" component2="rgmii_ethernet">   
-      <connection_map name="part0_rgmii_ethernet" c1_st_index="29" c1_end_index="43" c2_st_index="0" c2_end_index="14"/>
+    <!-- MII Ethernet -->
+    <connection name="part0_mii_ethernet" component1="part0" component2="mii_ethernet">   
+      <connection_map name="part0_mii_ethernet" c1_st_index="29" c1_end_index="43" c2_st_index="0" c2_end_index="14"/>
     </connection> 
     
     <!-- PCIe -->
@@ -1272,6 +1305,7 @@
       <ip vendor="xilinx.com" library="ip" name="ddr4" version="*" ip_interface="C0_SYS_CLK"> 
         <associated_board_interfaces>
           <associated_board_interface name="system_clock_300mhz" order="0"/> 
+          <associated_board_interface name="system_reset" order="1"/> 
         </associated_board_interfaces>
       </ip>
 
