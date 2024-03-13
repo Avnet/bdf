@@ -731,7 +731,7 @@
         </interface>
   
         <!-- System Reset -->
-        <interface mode="slave" name="system_reset" type="xilinx.com:signal:reset_rtl:1.0" of_component="sys_reset">
+        <interface mode="slave" name="system_resetn" type="xilinx.com:signal:reset_rtl:1.0" of_component="sys_reset">
           <parameters>
             <parameter name="rst_polarity" value="0"/>
           </parameters>
@@ -1069,7 +1069,7 @@
             <interface name="ddr4_sdram"/>
             <interface name="system_clock_300mhz" optional="true"/>
 <!--
-            <interface name="system_reset" optional="true"/>
+            <interface name="system_resetn" optional="true"/>
 -->
           </interfaces>
         </component_mode>
@@ -1239,62 +1239,62 @@
     
     <!-- MII Ethernet -->
     <connection name="part0_mii_ethernet" component1="part0" component2="mii_ethernet">   
-      <connection_map name="part0_mii_ethernet" c1_st_index="29" c1_end_index="43" c2_st_index="0" c2_end_index="14"/>
+      <connection_map name="part0_mii_ethernet" c1_st_index="29" c1_end_index="47" c2_st_index="0" c2_end_index="18"/>
     </connection> 
     
     <!-- PCIe -->
     <connection name="part0_pcie" component1="part0" component2="pcie">   
-      <connection_map name="part0_pcie" c1_st_index="44" c1_end_index="59" c2_st_index="0" c2_end_index="15"/>
+      <connection_map name="part0_pcie" c1_st_index="48" c1_end_index="63" c2_st_index="0" c2_end_index="15"/>
     </connection> 
     
     <!-- SFP+ 10Gb Ethernet -->
     <connection name="part0_sfp_xgmii" component1="part0" component2="sfp_xgmii">   
-      <connection_map name="part0_sfp_xgmii" c1_st_index="60" c1_end_index="63" c2_st_index="0" c2_end_index="3"/>
+      <connection_map name="part0_sfp_xgmii" c1_st_index="64" c1_end_index="67" c2_st_index="0" c2_end_index="3"/>
     </connection> 
     
     <!-- System UART -->
     <connection name="part0_system_uart" component1="part0" component2="system_uart">   
-      <connection_map name="part0_system_uart" c1_st_index="64" c1_end_index="65" c2_st_index="0" c2_end_index="1"/>
+      <connection_map name="part0_system_uart" c1_st_index="68" c1_end_index="69" c2_st_index="0" c2_end_index="1"/>
     </connection> 
     
     <!-- System Clock -->
     <connection name="part0_sys_diff_clock" component1="part0" component2="sys_diff_clock">
-      <connection_map name="part0_sys_diff_clock" typical_delay="5" c1_st_index="66" c1_end_index="67" c2_st_index="0" c2_end_index="1"/>
+      <connection_map name="part0_sys_diff_clock" typical_delay="5" c1_st_index="70" c1_end_index="71" c2_st_index="0" c2_end_index="1"/>
     </connection> 
 
     <!-- HDMI MGT Ref Clock -->
     <connection name="part0_hdmi_ref_clock" component1="part0" component2="hdmi_ref_clock">
-      <connection_map name="part0_hdmi_ref_clock" typical_delay="5" c1_st_index="68" c1_end_index="69" c2_st_index="0" c2_end_index="1"/>
+      <connection_map name="part0_hdmi_ref_clock" typical_delay="5" c1_st_index="72" c1_end_index="73" c2_st_index="0" c2_end_index="1"/>
     </connection> 
 
     <!-- PCIe Ref Clock -->
     <connection name="part0_pcie_ref_clock" component1="part0" component2="pcie_ref_clock">
-      <connection_map name="part0_pcie_ref_clock" typical_delay="5" c1_st_index="70" c1_end_index="71" c2_st_index="0" c2_end_index="1"/>
+      <connection_map name="part0_pcie_ref_clock" typical_delay="5" c1_st_index="74" c1_end_index="75" c2_st_index="0" c2_end_index="1"/>
     </connection> 
 
     <!-- SFP+ Ref Clock -->
     <connection name="part0_sfp_ref_clock" component1="part0" component2="sfp_ref_clock">
-      <connection_map name="part0_sfp_ref_clock" typical_delay="5" c1_st_index="72" c1_end_index="73" c2_st_index="0" c2_end_index="1"/>
+      <connection_map name="part0_sfp_ref_clock" typical_delay="5" c1_st_index="76" c1_end_index="77" c2_st_index="0" c2_end_index="1"/>
     </connection> 
 
     <!-- PCIe Reset -->
     <connection name="part0_pcie_perstn" component1="part0" component2="pcie_perstn">
-      <connection_map name="part0_pcie_perstn" c1_st_index="74" c1_end_index="74" c2_st_index="0" c2_end_index="0"/>
+      <connection_map name="part0_pcie_perstn" c1_st_index="78" c1_end_index="78" c2_st_index="0" c2_end_index="0"/>
     </connection>
 
     <!-- System Reset -->
-    <connection name="part0_system_reset" component1="part0" component2="system_reset">   
-      <connection_map name="part0_system_reset" c1_st_index="75" c1_end_index="75" c2_st_index="0" c2_end_index="0"/>
+    <connection name="part0_system_resetn" component1="part0" component2="system_resetn">   
+      <connection_map name="part0_system_resetn" c1_st_index="79" c1_end_index="79" c2_st_index="0" c2_end_index="0"/>
     </connection> 
     
     <!-- DDR4 -->
     <connection name="part0_ddr4" component1="part0" component2="ddr4_sdram">   
-      <connection_map name="part0_ddr4_sdram" c1_st_index="76" c1_end_index="146" c2_st_index="0" c2_end_index="70"/>
+      <connection_map name="part0_ddr4_sdram" c1_st_index="80" c1_end_index="150" c2_st_index="0" c2_end_index="70"/>
     </connection> 
 
     <!-- FMC HPC -->
     <connection name="part0_fmc_hpc_connector" component1="part0" component2="fmc_hpc_connector">   
-      <connection_map name="part0_fmc_hpc" c1_st_index="147" c1_end_index="239" c2_st_index="0" c2_end_index="92"/>
+      <connection_map name="part0_fmc_hpc" c1_st_index="151" c1_end_index="243" c2_st_index="0" c2_end_index="92"/>
 
     </connection> 
   
@@ -1305,7 +1305,7 @@
       <ip vendor="xilinx.com" library="ip" name="ddr4" version="*" ip_interface="C0_SYS_CLK"> 
         <associated_board_interfaces>
           <associated_board_interface name="system_clock_300mhz" order="0"/> 
-          <associated_board_interface name="system_reset" order="1"/> 
+          <associated_board_interface name="system_resetn" order="1"/> 
         </associated_board_interfaces>
       </ip>
 
