@@ -21,8 +21,12 @@
  
 <part_info part_name="xcve2302-sfva784-1LP-e-S-es1">
 	<pins>
-		<pin index="0" name="lpddr4_clk1_p" iostandard="DIFF_SSTL15" loc="N23" />
-		<pin index="1" name="lpddr4_clk1_n" iostandard="DIFF_SSTL15" loc="N24" />
+		<!-- <pin index="0" name="lpddr4_clk1_p" iostandard="DIFF_SSTL15" loc="N23" /> -->
+		<!-- <pin index="1" name="lpddr4_clk1_n" iostandard="DIFF_SSTL15" loc="N24" /> -->
+		<!-- LPDDR4_CH0_CLK1 is in BANK 702, which conflicts with MIPI I/O -->
+		<!-- Refer to https://support.xilinx.com/s/article/55734 for resolution  -->
+		<pin index="0" name="lpddr4_clk1_p" iostandard="LVDS15" loc="N23" />
+		<pin index="1" name="lpddr4_clk1_n" iostandard="LVDS15" loc="N24" />
 
 		<!-- Push Buttons -->
 		<pin index="2" name="pmc_pb_0" iostandard="LVCMOS18" loc="AF9"/> <!-- PMC_MIO46 -->
@@ -45,43 +49,47 @@
 		<!-- should I add the "I2C EXPANDER USER LED" -->
 
 		<!-- LPDDR4_Channel_0 -->
-		<pin index="300" name="lpddr4_0_dq0" loc="AB14" />
-		<pin index="301" name="lpddr4_0_dq1" loc="AB21" />
-		<pin index="302" name="lpddr4_0_dq2" loc="AC16" />
-		<pin index="303" name="lpddr4_0_dq3" loc="AB15" />
-		<pin index="304" name="lpddr4_0_dq4" loc="AB20" />
-		<pin index="305" name="lpddr4_0_dq5" loc="AC20" />
-		<pin index="306" name="lpddr4_0_dq6" loc="AC22" />
-		<pin index="307" name="lpddr4_0_dq7" loc="AC13" />
-		<pin index="308" name="lpddr4_0_dq8" loc="AD21" />
-		<pin index="309" name="lpddr4_0_dq9" loc="AC17" />
-		<pin index="310" name="lpddr4_0_dq10" loc="AE22" />
-		<pin index="311" name="lpddr4_0_dq11" loc="AD14" />
-		<pin index="312" name="lpddr4_0_dq12" loc="AC14" />
-		<pin index="313" name="lpddr4_0_dq13" loc="AD22" />
-		<pin index="314" name="lpddr4_0_dq14" loc="AD17" />
+		<!-- lpddr4_0_dq[15:0] == LPDDR4_CH0_DQ_A[15:0] -->
+		<pin index="300" name="lpddr4_0_dq0" loc="AB21" />
+		<pin index="301" name="lpddr4_0_dq1" loc="AC20" />
+		<pin index="302" name="lpddr4_0_dq2" loc="AB15" />
+		<pin index="303" name="lpddr4_0_dq3" loc="AC16" />
+		<pin index="304" name="lpddr4_0_dq4" loc="AC13" />
+		<pin index="305" name="lpddr4_0_dq5" loc="AB14" />
+		<pin index="306" name="lpddr4_0_dq6" loc="AB20" />
+		<pin index="307" name="lpddr4_0_dq7" loc="AC22" />
+		<pin index="308" name="lpddr4_0_dq8" loc="AE22" />
+		<pin index="309" name="lpddr4_0_dq9" loc="AD22" />
+		<pin index="310" name="lpddr4_0_dq10" loc="AD21" />
+		<pin index="311" name="lpddr4_0_dq11" loc="AC14" />
+		<pin index="312" name="lpddr4_0_dq12" loc="AD14" />
+		<pin index="313" name="lpddr4_0_dq13" loc="AD17" />
+		<pin index="314" name="lpddr4_0_dq14" loc="AC17" />
 		<pin index="315" name="lpddr4_0_dq15" loc="AD20" />
-		<pin index="316" name="lpddr4_0_dq16" loc="AE19" />
-		<pin index="317" name="lpddr4_0_dq17" loc="AF14" />
+		<!-- lpddr4_0_dq[31:16] == LPDDR4_CH0_DQ_B[15:0] -->
+		<pin index="316" name="lpddr4_0_dq16" loc="AF13" />
+		<pin index="317" name="lpddr4_0_dq17" loc="AG15" />
 		<pin index="318" name="lpddr4_0_dq18" loc="AF18" />
 		<pin index="319" name="lpddr4_0_dq19" loc="AG18" />
 		<pin index="320" name="lpddr4_0_dq20" loc="AF19" />
-		<pin index="321" name="lpddr4_0_dq21" loc="AG15" />
-		<pin index="322" name="lpddr4_0_dq22" loc="AG13" />
-		<pin index="323" name="lpddr4_0_dq23" loc="AF13" />
-		<pin index="324" name="lpddr4_0_dq24" loc="AG22" />
-		<pin index="325" name="lpddr4_0_dq25" loc="AH22" />
-		<pin index="326" name="lpddr4_0_dq26" loc="AH17" />
-		<pin index="327" name="lpddr4_0_dq27" loc="AH18" />
-		<pin index="328" name="lpddr4_0_dq28" loc="AH20" />
-		<pin index="329" name="lpddr4_0_dq29" loc="AG21" />
-		<pin index="330" name="lpddr4_0_dq30" loc="AH15" />
-		<pin index="331" name="lpddr4_0_dq31" loc="AH14" />
+		<pin index="321" name="lpddr4_0_dq21" loc="AE19" />
+		<pin index="322" name="lpddr4_0_dq22" loc="AF14" />
+		<pin index="323" name="lpddr4_0_dq23" loc="AG13" />
+		<pin index="324" name="lpddr4_0_dq24" loc="AH22" />
+		<pin index="325" name="lpddr4_0_dq25" loc="AG22" />
+		<pin index="326" name="lpddr4_0_dq26" loc="AG21" />
+		<pin index="327" name="lpddr4_0_dq27" loc="AH20" />
+		<pin index="328" name="lpddr4_0_dq28" loc="AH18" />
+		<pin index="329" name="lpddr4_0_dq29" loc="AH17" />
+		<pin index="330" name="lpddr4_0_dq30" loc="AH14" />
+		<pin index="331" name="lpddr4_0_dq31" loc="AH15" />
 
+		<!-- lpddr4_0_dqs[1:0]_c/t == LPDDR4_CH0_DQS_C/T_A[1:0] -->
 		<pin index="332" name="lpddr4_0_dqs0_c" loc="AB17" />
 		<pin index="333" name="lpddr4_0_dqs0_t" loc="AB18" />
 		<pin index="334" name="lpddr4_0_dqs1_c" loc="AD11" />
 		<pin index="335" name="lpddr4_0_dqs1_t" loc="AD12" />
+		<!-- lpddr4_0_dqs[3:2]_c/t == LPDDR4_CH0_DQS_C/T_B[1:0] -->
 		<pin index="336" name="lpddr4_0_dqs2_c" loc="AG16" />
 		<pin index="337" name="lpddr4_0_dqs2_t" loc="AG17" />
 		<pin index="338" name="lpddr4_0_dqs3_c" loc="AH19" />
@@ -94,75 +102,85 @@
 		<pin index="344" name="lpddr4_0_ca_a4" loc="AC11" />
 		<pin index="345" name="lpddr4_0_ca_a5" loc="AE13" />
 
-		<pin index="346" name="lpddr4_0_ca_b0" loc="11" />
-		<pin index="347" name="lpddr4_0_ca_b1" loc="12" />
-		<pin index="348" name="lpddr4_0_ca_b2" loc="13" />
-		<pin index="349" name="lpddr4_0_ca_b3" loc="14" />
-		<pin index="350" name="lpddr4_0_ca_b4" loc="15" />
-		<pin index="351" name="lpddr4_0_ca_b5" loc="16" />
-
+	       	 
+		<!-- <pin index="346" name="lpddr4_0_ca_b0" loc="" /> -->
+		<!-- <pin index="347" name="lpddr4_0_ca_b1" loc="" /> -->
+		<!-- <pin index="348" name="lpddr4_0_ca_b2" loc="" /> -->
+		<!-- <pin index="349" name="lpddr4_0_ca_b3" loc="" /> -->
+		<!-- <pin index="350" name="lpddr4_0_ca_b4" loc="" /> -->
+		<!-- <pin index="351" name="lpddr4_0_ca_b5" loc="" /> -->
+		
+		
 		<pin index="352" name="lpddr4_0_cs_a0" loc="AG11" />
-
-		<pin index="353" name="lpddr4_0_cs_a1" loc="17" />
-		<pin index="354" name="lpddr4_0_cs_b0" loc="18" />
-		<pin index="355" name="lpddr4_0_cs_b1" loc="19" />
+		<!-- <pin index="353" name="lpddr4_0_cs_a1" loc="" /> -->
+		<!-- <pin index="354" name="lpddr4_0_cs_b0" loc="" /> -->
+		<!-- <pin index="355" name="lpddr4_0_cs_b1" loc="" /> -->
 
 		<pin index="356" name="lpddr4_0_cka_t" loc="AD16" />
-		<pin index="357" name="lpddr4_0_ckb_t" loc="20" />
+		<!-- <pin index="357" name="lpddr4_0_ckb_t" loc="" /> -->
 		<pin index="358" name="lpddr4_0_cka_c" loc="AD15" />
-		<pin index="359" name="lpddr4_0_ckb_c" loc="21" />
+		<!-- <pin index="359" name="lpddr4_0_ckb_c" loc="" /> -->
 		<pin index="360" name="lpddr4_0_cke_a" loc="AE18" />
-		<pin index="361" name="lpddr4_0_cke_b" loc="22" />
+		<!-- <pin index="361" name="lpddr4_0_cke_b" loc="" /> -->
 
+		<!-- lpddr4_0_dmi[1:0] == LPDDR4_CH0_DMI_A[1:0] -->
 		<pin index="362" name="lpddr4_0_dmi0" loc="AB12" />
 		<pin index="363" name="lpddr4_0_dmi1" loc="AC19" />
+		<!-- lpddr4_0_dmi[3:2] == LPDDR4_CH0_DMI_B[1:0] -->
 		<pin index="364" name="lpddr4_0_dmi2" loc="AG12" />
 		<pin index="365" name="lpddr4_0_dmi3" loc="AH13" />
-		<pin index="366" name="lpddr4_0_reset_n" iostandard="LVCMOS15" loc="L25" />
+		
+		<!-- <pin index="366" name="lpddr4_0_reset_n" iostandard="LVCMOS15" loc="L25" /> -->
+		<!-- LPDDR4_CH0_RESET_N is in BANK 702, which conflicts with MIPI I/O -->
+		<!-- Refer to https://support.xilinx.com/s/article/55734 for resolution  -->
+		<pin index="366" name="lpddr4_0_reset_n" iostandard="LVCMOS12" loc="L25" />
 
 		<!-- LPDDR4_Channel_1 -->
-		<pin index="367" name="lpddr4_1_dq0" loc="AA21" />
-		<pin index="368" name="lpddr4_1_dq1" loc="Y22" />
-		<pin index="369" name="lpddr4_1_dq2" loc="AA22" />
-		<pin index="370" name="lpddr4_1_dq3" loc="W24" />
-		<pin index="371" name="lpddr4_1_dq4" loc="Y23" />
-		<pin index="372" name="lpddr4_1_dq5" loc="V23" />
-		<pin index="373" name="lpddr4_1_dq6" loc="V24" />
-		<pin index="374" name="lpddr4_1_dq7" loc="W25" />
-		<pin index="375" name="lpddr4_1_dq8" loc="AD25" />
-		<pin index="376" name="lpddr4_1_dq9" loc="AE24" />
+		<!-- lpddr4_1_dq[15:0] == LPDDR4_CH1_DQ_A[15:0] -->
+		<pin index="367" name="lpddr4_1_dq0" loc="AA22" />
+		<pin index="368" name="lpddr4_1_dq1" loc="V23" />
+		<pin index="369" name="lpddr4_1_dq2" loc="V24" />
+		<pin index="370" name="lpddr4_1_dq3" loc="Y23" />
+		<pin index="371" name="lpddr4_1_dq4" loc="W25" />
+		<pin index="372" name="lpddr4_1_dq5" loc="W24" />
+		<pin index="373" name="lpddr4_1_dq6" loc="Y22" />
+		<pin index="374" name="lpddr4_1_dq7" loc="AA21" />
+		<pin index="375" name="lpddr4_1_dq8" loc="AE24" />
+		<pin index="376" name="lpddr4_1_dq9" loc="AG23" />
 		<pin index="377" name="lpddr4_1_dq10" loc="AH25" />
-		<pin index="378" name="lpddr4_1_dq11" loc="AF25" />
+		<pin index="378" name="lpddr4_1_dq11" loc="AH23" />
 		<pin index="379" name="lpddr4_1_dq12" loc="AH24" />
 		<pin index="380" name="lpddr4_1_dq13" loc="AG25" />
-		<pin index="381" name="lpddr4_1_dq14" loc="AH23" />
-		<pin index="382" name="lpddr4_1_dq15" loc="AG23" />
+		<pin index="381" name="lpddr4_1_dq14" loc="AF25" />
+		<pin index="382" name="lpddr4_1_dq15" loc="AD25" />
+		<!-- lpddr4_1_dq[31:16] == LPDDR4_CH1_DQ_B[15:0] -->
+		<pin index="383" name="lpddr4_1_dq16" loc="AG27" />
+		<pin index="384" name="lpddr4_1_dq17" loc="AG28" />
+		<pin index="385" name="lpddr4_1_dq18" loc="AE27" />
+		<pin index="386" name="lpddr4_1_dq19" loc="AD26" />
+		<pin index="387" name="lpddr4_1_dq20" loc="AE26" />
+		<pin index="388" name="lpddr4_1_dq21" loc="AF26" />
+		<pin index="389" name="lpddr4_1_dq22" loc="AH27" />
+		<pin index="390" name="lpddr4_1_dq23" loc="AG26" />
+		<pin index="391" name="lpddr4_1_dq24" loc="AB26" />
+		<pin index="392" name="lpddr4_1_dq25" loc="AB28" />
+		<pin index="393" name="lpddr4_1_dq26" loc="V25" />
+		<pin index="394" name="lpddr4_1_dq27" loc="W27" />
+		<pin index="395" name="lpddr4_1_dq28" loc="W26" />
+		<pin index="396" name="lpddr4_1_dq29" loc="AA28" />
+		<pin index="397" name="lpddr4_1_dq30" loc="Y26" />
+		<pin index="398" name="lpddr4_1_dq31" loc="AA26" />
 
-		<pin index="383" name="lpddr4_1_dq16" loc="V25" />
-		<pin index="384" name="lpddr4_1_dq17" loc="W26" />
-		<pin index="385" name="lpddr4_1_dq18" loc="AB26" />
-		<pin index="386" name="lpddr4_1_dq19" loc="AA26" />
-		<pin index="387" name="lpddr4_1_dq20" loc="Y26" />
-		<pin index="388" name="lpddr4_1_dq21" loc="W27" />
-		<pin index="389" name="lpddr4_1_dq22" loc="AB28" />
-		<pin index="390" name="lpddr4_1_dq23" loc="AA28" />
-		<pin index="391" name="lpddr4_1_dq24" loc="AD26" />
-		<pin index="392" name="lpddr4_1_dq25" loc="AE27" />
-		<pin index="393" name="lpddr4_1_dq26" loc="AF26" />
-		<pin index="394" name="lpddr4_1_dq27" loc="AE26" />
-		<pin index="395" name="lpddr4_1_dq28" loc="AG27" />
-		<pin index="396" name="lpddr4_1_dq29" loc="AG26" />
-		<pin index="397" name="lpddr4_1_dq30" loc="AH27" />
-		<pin index="398" name="lpddr4_1_dq31" loc="AG28" />
-
+		<!-- lpddr4_1_dqs[1:0]_c/t == LPDDR4_CH1_DQS_C/T_A[1:0] -->
 		<pin index="399" name="lpddr4_1_dqs0_c" loc="AA23" />
 		<pin index="400" name="lpddr4_1_dqs0_t" loc="Y24" />
 		<pin index="401" name="lpddr4_1_dqs1_c" loc="AF23" />
 		<pin index="402" name="lpddr4_1_dqs1_t" loc="AF24" />
-		<pin index="403" name="lpddr4_1_dqs2_c" loc="V27" />
-		<pin index="404" name="lpddr4_1_dqs2_t" loc="V28" />
-		<pin index="405" name="lpddr4_1_dqs3_c" loc="AD27" />
-		<pin index="406" name="lpddr4_1_dqs3_t" loc="AC28" />
+		<!-- lpddr4_1_dqs[3:2]_c/t == LPDDR4_CH1_DQS_C/T_B[1:0] -->
+		<pin index="405" name="lpddr4_1_dqs2_c" loc="AD27" />
+		<pin index="406" name="lpddr4_1_dqs2_t" loc="AC28" />
+		<pin index="403" name="lpddr4_1_dqs3_c" loc="V27" />
+		<pin index="404" name="lpddr4_1_dqs3_t" loc="V28" />
 
 		<pin index="407" name="lpddr4_1_ca_a0" loc="AC27" />
 		<pin index="408" name="lpddr4_1_ca_a1" loc="AF28" />
@@ -171,31 +189,38 @@
 		<pin index="411" name="lpddr4_1_ca_a4" loc="W21" />
 		<pin index="412" name="lpddr4_1_ca_a5" loc="AC24" />
 
-		<pin index="413" name="lpddr4_1_ca_b0" loc="23" />
-		<pin index="414" name="lpddr4_1_ca_b1" loc="24" />
-		<pin index="415" name="lpddr4_1_ca_b2" loc="25" />
-		<pin index="416" name="lpddr4_1_ca_b3" loc="26" />
-		<pin index="417" name="lpddr4_1_ca_b4" loc="27" />
-		<pin index="418" name="lpddr4_1_ca_b5" loc="28" />
+		<!-- <pin index="413" name="lpddr4_1_ca_b0" loc="" /> -->
+		<!-- <pin index="414" name="lpddr4_1_ca_b1" loc="" /> -->
+		<!-- <pin index="415" name="lpddr4_1_ca_b2" loc="" /> -->
+		<!-- <pin index="416" name="lpddr4_1_ca_b3" loc="" /> -->
+		<!-- <pin index="417" name="lpddr4_1_ca_b4" loc="" /> -->
+		<!-- <pin index="418" name="lpddr4_1_ca_b5" loc="" /> -->
 
 		<pin index="419" name="lpddr4_1_cs_a0" loc="Y27" />
 
-		<pin index="420" name="lpddr4_1_cs_a1" loc="29" />
-		<pin index="421" name="lpddr4_1_cs_b0" loc="30" />
-		<pin index="422" name="lpddr4_1_cs_b1" loc="31" />
+		<!-- <pin index="420" name="lpddr4_1_cs_a1" loc="" /> -->
+		<!-- <pin index="421" name="lpddr4_1_cs_b0" loc="" /> -->
+		<!-- <pin index="422" name="lpddr4_1_cs_b1" loc="" /> -->
 
 		<pin index="423" name="lpddr4_1_cka_t" loc="AB23" />
-		<pin index="424" name="lpddr4_1_ckb_t" loc="32" />
+		<!-- <pin index="424" name="lpddr4_1_ckb_t" loc="" /> -->
 		<pin index="425" name="lpddr4_1_cka_c" loc="AC23" />
-		<pin index="426" name="lpddr4_1_ckb_c" loc="33" />
+		<!-- <pin index="426" name="lpddr4_1_ckb_c" loc="" /> -->
 		<pin index="427" name="lpddr4_1_cke_a" loc="AB27" />
-		<pin index="428" name="lpddr4_1_cke_b" loc="34" />
+		<!-- <pin index="428" name="lpddr4_1_cke_b" loc="" /> -->
 
+		<!-- lpddr4_1_dmi[1:0] == LPDDR4_CH1_DMI_A[1:0] -->
 		<pin index="429" name="lpddr4_1_dmi0" loc="V22" />
 		<pin index="430" name="lpddr4_1_dmi1" loc="AD24" />
-		<pin index="431" name="lpddr4_1_dmi2" loc="Y28" />
-		<pin index="432" name="lpddr4_1_dmi3" loc="AE28" />
-		<pin index="433" name="lpddr4_1_reset_n" iostandard="LVCMOS15" loc="L24" />
+		<!-- lpddr4_1_dmi[3:2] == LPDDR4_CH1_DMI_B[1:0] -->
+		<pin index="432" name="lpddr4_1_dmi2" loc="AE28" />
+		<pin index="431" name="lpddr4_1_dmi3" loc="Y28" />
+		
+		<!-- <pin index="433" name="lpddr4_1_reset_n" iostandard="LVCMOS15" loc="L24" /> -->
+		<!-- LPDDR4_CH0_RESET_N is in BANK 702, which conflicts with MIPI I/O -->
+		<!-- Refer to https://support.xilinx.com/s/article/55734 for resolution  -->
+		<pin index="433" name="lpddr4_1_reset_n" iostandard="LVCMOS12" loc="L24" />
+		
 		
 	</pins>
 </part_info>
