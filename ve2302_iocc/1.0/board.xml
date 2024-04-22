@@ -58,7 +58,7 @@
 					</port_maps>
 				</interface>
 				
-				<interface mode="master" name="ch0_lpddr4" type="xilinx.com:interface:lpddr4_rtl:1.0" of_component="LPDDR4_Controller0" preset_proc="LPDDR4_Controller0_preset">
+				<interface mode="master" name="ch0_lpddr4_trip1" type="xilinx.com:interface:lpddr4_rtl:1.0" of_component="LPDDR4_Controller0" preset_proc="LPDDR4_Controller0_preset">
 					<description>LPDDR4 board interface, it can use AXI_NoC IP for connection.</description>
 					<parameters>
 						<parameter name="TYPE" value="CH0_LPDDR4" />
@@ -228,7 +228,7 @@
 					</port_maps>
 				</interface>
 				
-				<interface mode="master" name="ch1_lpddr4" type="xilinx.com:interface:lpddr4_rtl:1.0" of_component="LPDDR4_Controller0" preset_proc="LPDDR4_Controller0_preset">
+				<interface mode="master" name="ch1_lpddr4_trip1" type="xilinx.com:interface:lpddr4_rtl:1.0" of_component="LPDDR4_Controller0" preset_proc="LPDDR4_Controller0_preset">
 					<description>LPDDR4 board interface, it can use AXI_NoC IP for connection.</description>
 					<parameters>
 						<parameter name="TYPE" value="CH1_LPDDR4" />
