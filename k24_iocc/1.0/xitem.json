@@ -1,0 +1,34 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "k24_iocc",
+          "display": "Avnet K24 I/O Carrier Card",
+          "revision": "1.0",
+          "description": "Avnet K24 I/O Carrier Card",
+          "company": "avnet.com",
+          "company_display": "Avnet",
+          "author": "Avnet",
+          "contributors": [
+            {
+              "group": "Avnet",
+              "url": "avnet.com"
+            }
+          ],
+          "category": "Evaluation Boards",
+          "website": "http://avnet.me/",
+          "search-keywords": [
+            "k24_iocc",
+            "k24",
+            "avnet.com",
+            "board",
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  },
+  "_major": 1,
+  "_minor": 0
+}

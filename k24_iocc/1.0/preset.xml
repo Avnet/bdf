@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--<!DOCTYPE ip_presets SYSTEM "C:/Xilinx/Vivado/2021.1/data/boards/board_schemas/current/preset.dtd">-->
+<!-- -->
+<!--   ** **        **          **  ****      **  **********  ********** ®
+      **   **        **        **   ** **     **  **              **
+     **     **        **      **    **  **    **  **              **
+    **       **        **    **     **   **   **  *********       **
+   **         **        **  **      **    **  **  **              **
+  **           **        ****       **     ** **  **              **
+ **  .........  **        **        **      ****  **********      **
+    ...........
+                                    Reach Further™
+ Copyright (C) 2024, Avnet Inc - All rights reserved
+ Licensed under the Apache License, Version 2.0 (the "License"). You may
+ not use this file except in compliance with the License. A copy of the
+ License is located at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ License for the specific language governing permissions and limitations
+ under the License. -->
+
+<ip_presets schema="1.0">
+
+	<ip_preset preset_proc_name="mpsoc_preset_som240_1">
+		<ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" version="*">
+			<user_parameters>
+				<user_parameter name="CONFIG.PSU__I2C1__PERIPHERAL__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__I2C1__PERIPHERAL__IO" value="MIO 24 .. 25"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__I2C1_REF_CTRL__SRCSEL" value="IOPLL"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__I2C1_REF_CTRL__FREQMHZ" value="100"/>
+
+				<user_parameter name="CONFIG.PSU__UART1__PERIPHERAL__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__UART1__PERIPHERAL__IO" value="MIO 36 .. 37"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__UART1_REF_CTRL__SRCSEL" value="IOPLL"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__UART1_REF_CTRL__FREQMHZ" value="100"/>
+
+				<user_parameter name="CONFIG.PSU__ENET2__PERIPHERAL__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__ENET2__PERIPHERAL__IO" value="MIO 52 .. 63"/>
+				<user_parameter name="CONFIG.PSU__ENET2__GRP_MDIO__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__ENET2__GRP_MDIO__IO" value="MIO 76 .. 77"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__GEM2_REF_CTRL__SRCSEL" value="IOPLL"/>
+				<user_parameter name="CONFIG.PSU__CRL_APB__GEM2_REF_CTRL__FREQMHZ" value="125"/>
+
+				<user_parameter name="CONFIG.PSU__DISPLAYPORT__PERIPHERAL__ENABLE" value="0"/>
+
+				<user_parameter name="CONFIG.PSU__USB1__PERIPHERAL__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__USB1__PERIPHERAL__IO" value="MIO 64 .. 75"/>
+
+				<user_parameter name="CONFIG.PSU__SD0__PERIPHERAL__ENABLE" value="0"/>
+				<user_parameter name="CONFIG.PSU__SD1__PERIPHERAL__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__SD1__GRP_CD__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__SD1__PERIPHERAL__IO" value="MIO 46 .. 51"/>
+				<user_parameter name="CONFIG.PSU__SD1__SLOT_TYPE" value="SD 2.0"/>
+
+				<user_parameter name="CONFIG.PSU__PMU__GPI0__ENABLE" value="1"/>
+				<user_parameter name="CONFIG.PSU__PMU__GPO2__ENABLE" value="1"/>
+
+				<user_parameter name="CONFIG.PSU__GPIO2_MIO__PERIPHERAL__ENABLE" value="0"/>
+			</user_parameters>
+		</ip>
+	</ip_preset>
+
+	<ip_preset preset_proc_name="pl_led_preset">
+	 <ip vendor="xilinx.com" library="ip" name="axi_gpio" ip_interface="GPIO">
+		 <user_parameters>
+		   <user_parameter name="CONFIG.C_GPIO_WIDTH"  value="2"/>
+		   <user_parameter name="CONFIG.C_ALL_OUTPUTS" value="1"/>
+		   <user_parameter name="CONFIG.C_ALL_INPUTS"  value="0"/>
+		 </user_parameters>
+		</ip>
+	</ip_preset>
+
+	<ip_preset preset_proc_name="pl_pb_preset">
+	 <ip vendor="xilinx.com" library="ip" name="axi_gpio" ip_interface="GPIO">
+		 <user_parameters>
+		   <user_parameter name="CONFIG.C_GPIO_WIDTH"  value="2"/>
+		   <user_parameter name="CONFIG.C_ALL_OUTPUTS" value="0"/>
+		   <user_parameter name="CONFIG.C_ALL_INPUTS"  value="1"/>
+		 </user_parameters>
+		</ip>
+	</ip_preset>
+
+	<ip_preset preset_proc_name="pl_rgb_preset">
+	 <ip vendor="xilinx.com" library="ip" name="axi_gpio" ip_interface="GPIO">
+		 <user_parameters>
+		   <user_parameter name="CONFIG.C_GPIO_WIDTH"  value="3"/>
+		   <user_parameter name="CONFIG.C_ALL_OUTPUTS" value="1"/>
+		   <user_parameter name="CONFIG.C_ALL_INPUTS"  value="0"/>
+		 </user_parameters>
+		</ip>
+	</ip_preset>
+
+</ip_presets>
