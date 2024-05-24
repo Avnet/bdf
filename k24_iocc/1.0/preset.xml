@@ -54,6 +54,9 @@
 				<user_parameter name="CONFIG.PSU__SD1__PERIPHERAL__IO" value="MIO 46 .. 51"/>
 				<user_parameter name="CONFIG.PSU__SD1__SLOT_TYPE" value="SD 2.0"/>
 
+				<!-- fix SD card detect signal inverted on prototype -->
+				<user_parameter name="CONFIG.PSU_MIO_45_PULLUPDOWN" value="pulldown"/>
+
 				<user_parameter name="CONFIG.PSU__PMU__GPI0__ENABLE" value="1"/>
 				<user_parameter name="CONFIG.PSU__PMU__GPO2__ENABLE" value="1"/>
 
