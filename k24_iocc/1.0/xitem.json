@@ -13,11 +13,11 @@
           "contributors": [
             {
               "group": "Avnet",
-              "url": "avnet.com"
+              "url": "http://avnet.me/k24-dk"
             }
           ],
           "category": "Evaluation Boards",
-          "website": "http://avnet.me/",
+          "website": "http://avnet.me/k24-dk",
           "search-keywords": [
             "k24_iocc",
             "k24",
