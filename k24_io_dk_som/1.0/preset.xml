@@ -139,12 +139,15 @@
 <user_parameter name="CONFIG.PSU_MIO_51_DRIVE_STRENGTH" value="4"/>
 <user_parameter name="CONFIG.PSU_MIO_51_POLARITY" value="Default"/>
 <user_parameter name="CONFIG.PSU_MIO_51_SLEW" value="slow"/>
-<user_parameter name="CONFIG.PSU_MIO_54_DRIVE_STRENGTH" value="4"/>
-<user_parameter name="CONFIG.PSU_MIO_54_SLEW" value="slow"/>
-<user_parameter name="CONFIG.PSU_MIO_56_DRIVE_STRENGTH" value="4"/>
-<user_parameter name="CONFIG.PSU_MIO_56_SLEW" value="slow"/>
-<user_parameter name="CONFIG.PSU_MIO_57_DRIVE_STRENGTH" value="4"/>
-<user_parameter name="CONFIG.PSU_MIO_57_SLEW" value="slow"/>
+
+<!-- fix ethernet signal integrity -->
+<user_parameter name="CONFIG.PSU_MIO_54_DRIVE_STRENGTH" value="12"/>
+<user_parameter name="CONFIG.PSU_MIO_54_SLEW" value="fast"/>
+<user_parameter name="CONFIG.PSU_MIO_56_DRIVE_STRENGTH" value="12"/>
+<user_parameter name="CONFIG.PSU_MIO_56_SLEW" value="fast"/>
+<user_parameter name="CONFIG.PSU_MIO_57_DRIVE_STRENGTH" value="12"/>
+<user_parameter name="CONFIG.PSU_MIO_57_SLEW" value="fast"/>
+
 <user_parameter name="CONFIG.PSU_MIO_5_DRIVE_STRENGTH" value="4"/>
 <user_parameter name="CONFIG.PSU_MIO_5_SLEW" value="slow"/>
 <user_parameter name="CONFIG.PSU_MIO_66_DRIVE_STRENGTH" value="4"/>
