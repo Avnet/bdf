@@ -119,6 +119,10 @@
 <user_parameter name="CONFIG.PSU_MIO_44_POLARITY" value="Default"/>
 <user_parameter name="CONFIG.PSU_MIO_44_SLEW" value="slow"/>
 <user_parameter name="CONFIG.PSU_MIO_45_POLARITY" value="Default"/>
+
+<!-- fix SD card detect signal inverted on prototype -->
+<user_parameter name="CONFIG.PSU_MIO_45_PULLUPDOWN" value="pulldown"/>
+
 <user_parameter name="CONFIG.PSU_MIO_46_DRIVE_STRENGTH" value="4"/>
 <user_parameter name="CONFIG.PSU_MIO_46_POLARITY" value="Default"/>
 <user_parameter name="CONFIG.PSU_MIO_46_SLEW" value="slow"/>
