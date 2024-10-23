@@ -1,0 +1,34 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "ultrazed_3eg_iocc", 
+          "display": "UltraZed-EG SOM + IO Carrier", 
+          "revision": "1.2", 
+          "description": "UltraZed-EG SOM + IO Carrier", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/ultrazed-eg", 
+          "search-keywords": [
+            "ultrazed_3eg_iocc", 
+            "ultrazed", 
+            "avnet.com", 
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}
