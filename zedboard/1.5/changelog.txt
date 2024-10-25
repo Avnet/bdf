@@ -1,3 +1,7 @@
+1.5
+Updated company to Tria (an Avnet Company)
+Updated search keywords
+
 1.4
 Added FMC support 
 

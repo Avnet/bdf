@@ -5,25 +5,29 @@
         "infra": {
           "name": "ZUBoard_1CG", 
           "display": "ZUBoard 1CG Development Board", 
-          "revision": "1.0", 
+          "revision": "1.2", 
           "description": "ZUBoard 1CG Development Board", 
-          "company": "avnet.com", 
-          "company_display": "Avnet", 
+
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
           "author": "Avnet", 
           "contributors": [
             {
               "group": "Avnet", 
-              "url": "http://avnet.me/ZUBoard-1CG"
+              "url": "avnet.me/ZUBoard-1CG"
             }
-          ], 
+          ],
           "category": "Evaluation Boards", 
-          "website": "http://avnet.me/ZUBoard-1CG", 
+          "website": "avnet.me/ZUBoard-1CG", 
           "search-keywords": [
             "zuboard", 
             "zu1", 
             "1cg", 
             "devkit", 
+            "avnet",
+            "tria",     
             "avnet.com", 
+            "tria-technologies.com",
             "board", 
             "Evaluation Boards"
           ]

@@ -5,22 +5,25 @@
         "infra": {
           "name": "minized", 
           "display": "MiniZed", 
-          "revision": "1.3", 
+          "revision": "1.4", 
           "description": "MiniZed", 
-          "company": "avnet.com", 
-          "company_display": "Avnet", 
-          "author": "zedhed", 
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
+          "author": "Avnet", 
           "contributors": [
             {
               "group": "Avnet", 
-              "url": "avnet.com"
+              "url": "avnet.me/minized"
             }
-          ], 
+          ],
           "category": "Evaluation Boards", 
-          "website": "http://avnet.me/minized", 
+          "website": "avnet.me/minized", 
           "search-keywords": [
             "minized", 
+            "avnet",
+            "tria",     
             "avnet.com", 
+            "tria-technologies.com",
             "board", 
             "Evaluation Boards"
           ]

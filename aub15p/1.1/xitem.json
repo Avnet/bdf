@@ -5,26 +5,29 @@
         "infra": {
           "name": "AUBoard_15P", 
           "display": "AUBoard 15P Development Board", 
-          "revision": "1.0", 
+          "revision": "1.1", 
           "description": "AUBoard 15P Development Board", 
-          "company": "avnet.com", 
-          "company_display": "Avnet", 
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
           "author": "Avnet", 
           "contributors": [
             {
               "group": "Avnet", 
-              "url": "http://avnet.me/AUBoard-15P"
+              "url": "avnet.me/AUBoard-15P"
             }
-          ], 
+          ],
           "category": "Evaluation Boards", 
-          "website": "http://avnet.me/AUBoard-15P", 
+          "website": "avnet.me/AUBoard-15P", 
           "search-keywords": [
             "auboard", 
             "aub15p", 
             "au15p", 
             "15p", 
             "devkit", 
+            "avnet",
+            "tria",     
             "avnet.com", 
+            "tria-technologies.com",
             "board", 
             "Evaluation Boards"
           ]

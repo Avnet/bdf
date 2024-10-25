@@ -5,22 +5,26 @@
         "infra": {
           "name": "microzed_7020", 
           "display": "Microzed 7020", 
-          "revision": "1.3", 
-          "description": "Microzed 7020", 
-          "company": "avnet.com", 
-          "company_display": "Avnet", 
+          "revision": "1.4", 
+          "description": "Microzed 7020",
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
           "author": "Avnet", 
           "contributors": [
             {
               "group": "Avnet", 
-              "url": "avnet.com"
+              "url": "avnet.me/microzed"
             }
-          ], 
+          ],
           "category": "Evaluation Boards", 
-          "website": "http://avnet.me/microzed", 
+          "website": "avnet.me/microzed", 
           "search-keywords": [
             "microzed_7020", 
+            "microzed",
+            "avnet",
+            "tria",     
             "avnet.com", 
+            "tria-technologies.com",
             "board", 
             "Evaluation Boards"
           ]

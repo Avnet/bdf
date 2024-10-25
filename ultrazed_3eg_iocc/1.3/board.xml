@@ -18,7 +18,7 @@
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License. -->
-<board schema_version="2.2" vendor="avnet.com" name="ultrazed_eg_iocc_production" display_name="Avnet UltraZed-3EG IO Carrier Card" url="http://avnet.me/ultrazed-eg" preset_file="preset.xml">
+<board schema_version="2.2" vendor="Avnet-tria" name="ultrazed_eg_iocc_production" display_name="Avnet UltraZed-3EG IO Carrier Card" url="http://avnet.me/ultrazed-eg" preset_file="preset.xml">
 <images>
     <image name="ultrazed_eg_io_carrier_card.jpg" display_name="UltraZed-3EG IO Carrier Card" sub_type="board">
       <description>UltraZed-3EG IO Carrier Card File Image</description>
@@ -27,7 +27,7 @@
   <compatible_board_revisions>
     <revision id="0">1.0</revision>
   </compatible_board_revisions>
-  <file_version>1.2</file_version>
+  <file_version>1.3</file_version>
   <description>Avnet UltraZed-3EG IO Carrier Card</description>
 
   <components>
