@@ -23,7 +23,7 @@
 	schema_version="2.2" 
 	vendor="Avnet-tria" 
 	name="Ultra96v2" 
-	display_name="Ultra96-V2 Single Board Computer" 
+	display_name="Avnet-Tria Ultra96-V2 Single Board Computer" 
 	url="http://avnet.me/ultra96-v2" 
 	preset_file="preset.xml">
 

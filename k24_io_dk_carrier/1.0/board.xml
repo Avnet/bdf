@@ -28,7 +28,7 @@
 	preset_file="preset.xml">
 
 	<images>
-		<image name="k24_development_kit.png" display_name="K24 Development Kit - SOM and Carrier Card" sub_type="board">
+		<image name="k24_development_kit.png" display_name="Avnet-Tria K24 Development Kit - SOM and Carrier Card" sub_type="board">
 			<description>K24 Development Kit - SOM and Carrier Card Image</description>
 		</image>
 	</images>

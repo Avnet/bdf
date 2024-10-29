@@ -25,7 +25,7 @@
    schema_version="2.2" 
    vendor="Avnet-tria" 
    name="ZUBoard_1CG" 
-   display_name="ZUBoard 1CG Development Board" 
+   display_name="Avnet-Tria ZUBoard 1CG Development Board" 
    url="http://avnet.me/ZUBoard-1CG" 
    preset_file="preset.xml">
 

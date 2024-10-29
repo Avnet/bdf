@@ -21,7 +21,7 @@
  License for the specific language governing permissions and limitations
  under the License. -->
  
-<board schema_version="2.2" vendor="Avnet-tria" name="AUBoard_15P" display_name="AUBoard 15P Development Board" url="http://avnet.me/AUBoard-15P" preset_file="preset.xml">
+<board schema_version="2.2" vendor="Avnet-tria" name="AUBoard_15P" display_name="Avnet-Tria AUBoard 15P Development Board" url="http://avnet.me/AUBoard-15P" preset_file="preset.xml">
 
   <images>
     <image 

@@ -19,7 +19,7 @@
  License for the specific language governing permissions and limitations
  under the License. -->
 
-<board schema_version="2.2" vendor="Avnet-tria" name="k24_io_dk_som" display_name="K24 Development Kit - SOM and Carrier Card" url="avnet.me/k24-dk" preset_file="preset.xml">
+<board schema_version="2.2" vendor="Avnet-tria" name="k24_io_dk_som" display_name="Avnet-Tria K24 Development Kit - SOM and Carrier Card" url="avnet.me/k24-dk" preset_file="preset.xml">
 
 	<images>
 		<image name="k24_development_kit.png" display_name="K24 Development Kit - SOM and Carrier Card" sub_type="board">

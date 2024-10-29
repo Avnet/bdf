@@ -18,7 +18,7 @@
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License. -->
-<board schema_version="2.2" vendor="Avnet-tria" name="minized" display_name="MiniZed" url="http://avnet.me/minized" preset_file="preset.xml" >
+<board schema_version="2.2" vendor="Avnet-tria" name="minized" display_name="Avnet-Tria MiniZed" url="http://avnet.me/minized" preset_file="preset.xml" >
   <images>
     <image name="minized.jpg" display_name="MiniZed" sub_type="board">
       <description>MiniZed Board File Image</description>

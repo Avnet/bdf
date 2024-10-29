@@ -23,7 +23,7 @@
 	schema_version="2.2" 
 	vendor="Avnet-tria" 
 	name="zedboard" 
-	display_name="ZedBoard Zynq Evaluation and Development Kit" 
+	display_name="Avnet-Tria ZedBoard Zynq Evaluation and Development Kit" 
 	url="http://avnet.me/zedboard" 
 	preset_file="preset.xml">
 <images>

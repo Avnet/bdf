@@ -18,7 +18,7 @@
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License. -->
-<board schema_version="2.2" vendor="Avnet-tria" name="picozed_7020_fmc2" display_name="PicoZed 7020 SOM + FMC Carrier V2" url="http://avnet.me/picozed" preset_file="preset.xml" >
+<board schema_version="2.2" vendor="Avnet-tria" name="picozed_7020_fmc2" display_name="Avnet-Tria PicoZed 7020 SOM + FMC Carrier V2" url="http://avnet.me/picozed" preset_file="preset.xml" >
   <images>
     <image name="picozed_fmc2_carrier_card.jpg" display_name="PicoZed FMC2 Carrier Card" sub_type="board">
       <description>PicoZed FMC Carrier Card V2 File Image</description>

@@ -18,7 +18,7 @@
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License. -->
-<board schema_version="2.2" vendor="Avnet-tria" name="microzed_7020" display_name="MicroZed 7020 Board" url="http://avnet.me/microzed" preset_file="preset.xml" >
+<board schema_version="2.2" vendor="Avnet-tria" name="microzed_7020" display_name="Avnet-Tria MicroZed 7020 Board" url="http://avnet.me/microzed" preset_file="preset.xml" >
   <images>
     <image name="microzed_7020.jpg" display_name="MicroZed" sub_type="board">
       <description>MicroZed 7020 Image File</description>

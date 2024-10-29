@@ -18,7 +18,7 @@
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License. -->
-<board schema_version="2.2" vendor="Avnet-tria" name="ultrazed_eg_pciecc_production" display_name="Avnet UltraZed-3EG PCIe Carrier Card" url="http://avnet.me/ultrazed-eg" preset_file="preset.xml">
+<board schema_version="2.2" vendor="Avnet-tria" name="ultrazed_eg_pciecc_production" display_name="Avnet-Tria UltraZed-3EG PCIe Carrier Card" url="http://avnet.me/ultrazed-eg" preset_file="preset.xml">
 <images>
     <image name="ultrazed_eg_pcie_carrier_card.jpg" display_name="UltraZed-3EG PCIe Carrier Card" sub_type="board">
       <description>UltraZed-3EG PCIe Carrier Card File Image</description>
