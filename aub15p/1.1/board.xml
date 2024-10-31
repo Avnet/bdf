@@ -25,7 +25,7 @@
 
   <images>
     <image 
-      name="aub15p_top.png" 
+      name="aub15p_board.jpg" 
       display_name="AUBoard 15P Development Board" 
       sub_type="board">
       <description>AUBoard 15P Board Image</description>
