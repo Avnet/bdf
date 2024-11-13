@@ -660,6 +660,28 @@
             </port_map>
           </port_maps>
         </interface>
+
+        <!-- User Clock -->
+        <interface mode="slave" name="user_clock_300mhz" type="xilinx.com:interface:diff_clock_rtl:1.0" of_component="user_diff_clock" preset_proc="user_clock_preset">
+          <parameters>
+            <parameter name="frequency" value="300000000"/>
+          </parameters>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="clk_wiz" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="CLK_P" physical_port="user_clk_p" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="HD_CLK_P"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CLK_N" physical_port="user_clk_n" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="HD_CLK_N"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
   
         <!-- HDMI MGT Ref Clock -->
         <interface mode="slave" name="hdmi_ref_clk_297MHz" type="xilinx.com:interface:diff_clock_rtl:1.0" of_component="hdmi_ref_clock" preset_proc="hdmi_ref_clk_preset">
@@ -1021,6 +1043,14 @@
         <parameter name="frequency" value="300000000"/>
       </parameters>
     </component>
+
+    <!-- User Clock -->
+    <component name="user_diff_clock" display_name="User differential clock" type="chip" sub_type="mgt_clock" major_group="Clock Sources" part_name="8T49N241" vendor="Renesas" spec_url="www.renesas.com">
+      <description>LVDS differential 300 MHz User Clock</description>
+      <parameters>
+        <parameter name="frequency" value="300000000"/>
+      </parameters>
+    </component>
     
     <!-- SFP+ Ref Clock -->
     <component name="sfp_ref_clock" display_name="SFP+ MGT Reference Clock" type="chip" sub_type="mgt_clock" major_group="Clock Sources" part_name="RC31008AQ71GL2#BD0" vendor="Renesas" spec_url="www.renesas.com">
@@ -1034,7 +1064,7 @@
     <component name="hdmi_ref_clock" display_name="HDMI MGT Reference Clock" type="chip" sub_type="mgt_clock" major_group="Clock Sources" part_name="RC31008AQ71GL2#BD0" vendor="Renesas" spec_url="www.renesas.com">
       <description>HDMI 297 MHz Reference Clock</description>
       <parameters>
-        <parameter name="frequency" value="156250000"/>
+        <parameter name="frequency" value="297000000"/>
       </parameters>
     </component>
 
@@ -1295,7 +1325,11 @@
     <!-- FMC HPC -->
     <connection name="part0_fmc_hpc_connector" component1="part0" component2="fmc_hpc_connector">   
       <connection_map name="part0_fmc_hpc" c1_st_index="151" c1_end_index="243" c2_st_index="0" c2_end_index="92"/>
+    </connection>
 
+    <!-- User Clock -->
+    <connection name="part0_user_diff_clock" component1="part0" component2="user_diff_clock">
+      <connection_map name="part0_user_diff_clock" typical_delay="5" c1_st_index="244" c1_end_index="245" c2_st_index="0" c2_end_index="1"/>
     </connection> 
   
   </connections> 
@@ -1305,7 +1339,6 @@
       <ip vendor="xilinx.com" library="ip" name="ddr4" version="*" ip_interface="C0_SYS_CLK"> 
         <associated_board_interfaces>
           <associated_board_interface name="system_clock_300mhz" order="0"/> 
-          <associated_board_interface name="system_resetn" order="1"/> 
         </associated_board_interfaces>
       </ip>
 
@@ -1331,6 +1364,7 @@
         <associated_board_interfaces>
           <associated_board_interface name="pcie_ref_clk_100MHz" order="0"/> 
           <associated_board_interface name="system_clock_300mhz" order="1"/> 
+          <associated_board_interface name="user_clock_300mhz" order="2"/>
         </associated_board_interfaces>
       </ip>
    

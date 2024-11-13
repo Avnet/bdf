@@ -675,6 +675,22 @@
     </ip>
   </ip_preset>
 
+  <!-- User Clock -->
+  <ip_preset preset_proc_name="user_clock_preset">
+    <ip vendor="xilinx.com" library="ip" name="clk_wiz" ip_interface="CLK_IN1_D">
+      <user_parameters>
+        <user_parameter name="CONFIG.PRIM_IN_FREQ" value="300"/> 
+        <user_parameter name="CONFIG.PRIM_SOURCE" value="Differential_clock_capable_pin"/> 
+      </user_parameters>
+    </ip>
+    <ip vendor="xilinx.com" library="ip" name="util_ds_buf">
+      <user_parameters>
+        <user_parameter name="CONFIG.C_BUF_TYPE" value="IBUFDS" />
+        <user_parameter name="CONFIG.C_SIZE" value="1" />
+        </user_parameters>
+    </ip>
+  </ip_preset>
+
   <!-- HDMI MGT Ref Clock -->
   <ip_preset preset_proc_name="hdmi_ref_clk_preset">
     <ip vendor="xilinx.com" library="ip" name="util_ds_buf">

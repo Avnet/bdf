@@ -330,5 +330,8 @@
     <pin index="242"  name="fmc_hpc_la32_p"                                     loc="A13"/> <!-- H37 HD_DP_11_P -->
     <pin index="243"  name="fmc_hpc_la32_n"                                     loc="A12"/> <!-- H38 HD_DP_11_N -->
 
+    <!-- User Clock -->
+    <pin index="244"   name ="HD_CLK_N"           iostandard="LVDS_25"      loc="D10"/>
+    <pin index="245"   name ="HD_CLK_P"           iostandard="LVDS_25"      loc="D11"/>
   </pins>
 </part_info>
