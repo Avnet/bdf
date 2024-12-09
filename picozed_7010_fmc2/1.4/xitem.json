@@ -1,0 +1,37 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "picozed_7010_fmc2", 
+          "display": "PicoZed 7010 SOM + FMC Carrier V2", 
+          "revision": "1.4", 
+          "description": "PicoZed 7010 SOM + FMC Carrier V2", 
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.me/picozed"
+            }
+          ],
+          "category": "Evaluation Boards", 
+          "website": "avnet.me/picozed", 
+          "search-keywords": [
+            "picozed_7010_fmc2",
+            "picozed",
+            "avnet",
+            "tria",     
+            "avnet.com", 
+            "tria-technologies.com",
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

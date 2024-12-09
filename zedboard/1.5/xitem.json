@@ -1,0 +1,37 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "zedboard", 
+          "display": "ZedBoard Zynq Evaluation and Development Kit", 
+          "revision": "1.5", 
+          "description": "ZedBoard Zynq Evaluation and Development Kit", 
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.me/zedboard"
+            }
+          ],
+          "category": "Evaluation Boards", 
+          "website": "http://avnet.me/zedboard", 
+          "logo": "zed_board.jpg", 
+          "search-keywords": [
+            "zedboard", 
+            "avnet",
+            "tria",     
+            "avnet.com", 
+            "tria-technologies.com",
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

@@ -1,0 +1,37 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "ultrazed_7ev_cc", 
+          "display": "UltraZed-EV SOM + EV Carrier", 
+          "revision": "1.6", 
+          "description": "UltraZed-EV SOM + EV Carrier", 
+          "company": "Tria (an Avnet Company)", 
+          "company_display": "Tria (an Avnet Company)", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.me/ultrazed-ev"
+            }
+          ],
+          "category": "Evaluation Boards", 
+          "website": "avnet.me/ultrazed-ev", 
+          "search-keywords": [
+            "ultrazed_7ev_cc", 
+            "ultrazed", 
+            "avnet",
+            "tria",     
+            "avnet.com", 
+            "tria-technologies.com",
+            "board", 
+            "Evaluation Boards"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}

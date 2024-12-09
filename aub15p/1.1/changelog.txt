@@ -1,0 +1,6 @@
+1.1
+Updated company to Tria (an Avnet Company)
+Updated search keywords
+
+1.0
+Original version

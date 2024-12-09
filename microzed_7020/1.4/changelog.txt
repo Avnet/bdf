@@ -1,0 +1,8 @@
+1.4
+Updated company to Tria (an Avnet Company)
+Updated search keywords
+
+1.3
+Updated company URL to avnet.com
+Updated Product URL
+Changed category to Evaluation Boards
